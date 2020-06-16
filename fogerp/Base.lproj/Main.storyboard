@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,39 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fogerp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashbackground" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TXV-5Z-8mw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fogerpwhite" translatesAutoresizingMaskIntoConstraints="NO" id="Ttp-xw-IYU">
+                                <rect key="frame" x="50" y="296" width="315" height="270"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ttp-xw-IYU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="4nj-eN-D3k"/>
+                            <constraint firstAttribute="trailing" secondItem="TXV-5Z-8mw" secondAttribute="trailing" id="BGi-fC-0iw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TXV-5Z-8mw" secondAttribute="bottom" id="F0n-PT-VP8"/>
+                            <constraint firstItem="Ttp-xw-IYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="IBJ-Dl-ILA"/>
+                            <constraint firstItem="Ttp-xw-IYU" firstAttribute="centerX" secondItem="TXV-5Z-8mw" secondAttribute="centerX" id="fG9-um-VDx"/>
+                            <constraint firstItem="Ttp-xw-IYU" firstAttribute="centerY" secondItem="TXV-5Z-8mw" secondAttribute="centerY" id="iOw-oD-kvI"/>
+                            <constraint firstItem="TXV-5Z-8mw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="my5-2k-rh8"/>
+                            <constraint firstItem="TXV-5Z-8mw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oWd-EI-fXe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="26.116071428571427"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fogerpwhite" width="601" height="194"/>
+        <image name="splashbackground" width="4689" height="8789"/>
+    </resources>
 </document>
