@@ -14,6 +14,7 @@
 		E84CF0DB2498B39000136D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */; };
 		E84CF0E62498B39000136D6C /* fogerpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0E52498B39000136D6C /* fogerpTests.swift */; };
 		E84CF0F12498B39000136D6C /* fogerpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0F02498B39000136D6C /* fogerpUITests.swift */; };
+		E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E84CF0EC2498B39000136D6C /* fogerpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fogerpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CF0F02498B39000136D6C /* fogerpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fogerpUITests.swift; sourceTree = "<group>"; };
 		E84CF0F22498B39000136D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E84CF0D72498B39000136D6C /* Assets.xcassets */,
 				E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */,
 				E84CF0DC2498B39000136D6C /* Info.plist */,
+				E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
 				E84CF0D32498B38E00136D6C /* ViewController.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,
 			);
