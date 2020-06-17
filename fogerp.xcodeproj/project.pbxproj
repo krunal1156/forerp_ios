@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18AA5CC5249A002F00F4902C /* Container_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CC4249A002F00F4902C /* Container_controller.swift */; };
+		18AA5CC7249A003C00F4902C /* home_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CC6249A003C00F4902C /* home_controller.swift */; };
+		18AA5CC9249A005000F4902C /* menu_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CC8249A005000F4902C /* menu_controller.swift */; };
+		18AA5CCB249A097800F4902C /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CCA249A097800F4902C /* protocols.swift */; };
 		E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D02498B38E00136D6C /* AppDelegate.swift */; };
 		E84CF0D32498B38E00136D6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D22498B38E00136D6C /* ViewController.swift */; };
 		E84CF0D62498B38E00136D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D42498B38E00136D6C /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18AA5CC4249A002F00F4902C /* Container_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_controller.swift; sourceTree = "<group>"; };
+		18AA5CC6249A003C00F4902C /* home_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_controller.swift; sourceTree = "<group>"; };
+		18AA5CC8249A005000F4902C /* menu_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_controller.swift; sourceTree = "<group>"; };
+		18AA5CCA249A097800F4902C /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		E84CF0CD2498B38E00136D6C /* fogerp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fogerp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CF0D02498B38E00136D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84CF0D22498B38E00136D6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18AA5CC02499FFE000F4902C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				18AA5CCA249A097800F4902C /* protocols.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		18AA5CC12499FFFB00F4902C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				18AA5CC4249A002F00F4902C /* Container_controller.swift */,
+				18AA5CC6249A003C00F4902C /* home_controller.swift */,
+				18AA5CC8249A005000F4902C /* menu_controller.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		18AA5CC2249A000300F4902C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		18AA5CC3249A001A00F4902C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		E84CF0C42498B38E00136D6C = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +139,10 @@
 		E84CF0CF2498B38E00136D6C /* fogerp */ = {
 			isa = PBXGroup;
 			children = (
+				18AA5CC3249A001A00F4902C /* view */,
+				18AA5CC2249A000300F4902C /* model */,
+				18AA5CC12499FFFB00F4902C /* controller */,
+				18AA5CC02499FFE000F4902C /* utils */,
 				E84CF0D02498B38E00136D6C /* AppDelegate.swift */,
 				E84CF0D22498B38E00136D6C /* ViewController.swift */,
 				E84CF0D42498B38E00136D6C /* Main.storyboard */,
@@ -260,8 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
+				18AA5CCB249A097800F4902C /* protocols.swift in Sources */,
 				E84CF0D32498B38E00136D6C /* ViewController.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,
+				18AA5CC7249A003C00F4902C /* home_controller.swift in Sources */,
+				18AA5CC9249A005000F4902C /* menu_controller.swift in Sources */,
+				18AA5CC5249A002F00F4902C /* Container_controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
