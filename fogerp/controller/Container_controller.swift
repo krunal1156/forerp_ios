@@ -19,6 +19,7 @@ class container_controller:UIViewController{
         super.viewDidLoad()
         configureHomeController()
         configureMenuController()
+        view.backgroundColor = .brown
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -71,10 +72,11 @@ class container_controller:UIViewController{
 extension container_controller:HomeControllerDelegate{
     func HandleMenuToggle() {
         
+        print ("toggle one")
         if !isExpanded {
             configureMenuController()
         }
-        isExpanded != isExpanded
+        isExpanded = !isExpanded
         
         self.showMenucontroller(shouldExpand:isExpanded)
     }

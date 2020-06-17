@@ -17,12 +17,14 @@ class home_controller:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        configurenavigationBar()
     }
     
     @objc func handleMenuToggle(){
-        print("toggle click")
+        //print("toggle click")
         delegate?.HandleMenuToggle()
     }
+    
     func configurenavigationBar(){
         navigationController?.navigationBar.barTintColor = .darkGray
         navigationController?.navigationBar.barStyle = .black
