@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18AA5CC5249A002F00F4902C /* Container_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CC4249A002F00F4902C /* Container_controller.swift */; };
-		18AA5CC7249A003C00F4902C /* home_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CC6249A003C00F4902C /* home_controller.swift */; };
-		18AA5CC9249A005000F4902C /* menu_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CC8249A005000F4902C /* menu_controller.swift */; };
-		18AA5CCB249A097800F4902C /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CCA249A097800F4902C /* protocols.swift */; };
+		18AA5CD0249A29A100F4902C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CCF249A29A100F4902C /* SWRevealViewController.m */; };
+		18AA5CD2249A2AB400F4902C /* ViewController_Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD1249A2AB400F4902C /* ViewController_Menu.swift */; };
+		18AA5CD4249A2AF700F4902C /* ViewController_DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD3249A2AF700F4902C /* ViewController_DashBoard.swift */; };
 		E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D02498B38E00136D6C /* AppDelegate.swift */; };
 		E84CF0D32498B38E00136D6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D22498B38E00136D6C /* ViewController.swift */; };
 		E84CF0D62498B38E00136D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D42498B38E00136D6C /* Main.storyboard */; };
@@ -39,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18AA5CC4249A002F00F4902C /* Container_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container_controller.swift; sourceTree = "<group>"; };
-		18AA5CC6249A003C00F4902C /* home_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_controller.swift; sourceTree = "<group>"; };
-		18AA5CC8249A005000F4902C /* menu_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_controller.swift; sourceTree = "<group>"; };
-		18AA5CCA249A097800F4902C /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
+		18AA5CCD249A29A000F4902C /* fogerp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fogerp-Bridging-Header.h"; sourceTree = "<group>"; };
+		18AA5CCE249A29A100F4902C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../Hrms/Hrms/CustomComponent/SWRevealViewController.h; sourceTree = "<group>"; };
+		18AA5CCF249A29A100F4902C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Hrms/Hrms/CustomComponent/SWRevealViewController.m; sourceTree = "<group>"; };
+		18AA5CD1249A2AB400F4902C /* ViewController_Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Menu.swift; sourceTree = "<group>"; };
+		18AA5CD3249A2AF700F4902C /* ViewController_DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_DashBoard.swift; sourceTree = "<group>"; };
 		E84CF0CD2498B38E00136D6C /* fogerp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fogerp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CF0D02498B38E00136D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84CF0D22498B38E00136D6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,36 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18AA5CC02499FFE000F4902C /* utils */ = {
+		18AA5CCC249A280D00F4902C /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				18AA5CCA249A097800F4902C /* protocols.swift */,
+				18AA5CCE249A29A100F4902C /* SWRevealViewController.h */,
+				18AA5CCF249A29A100F4902C /* SWRevealViewController.m */,
+				18AA5CCD249A29A000F4902C /* fogerp-Bridging-Header.h */,
 			);
-			path = utils;
-			sourceTree = "<group>";
-		};
-		18AA5CC12499FFFB00F4902C /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				18AA5CC4249A002F00F4902C /* Container_controller.swift */,
-				18AA5CC6249A003C00F4902C /* home_controller.swift */,
-				18AA5CC8249A005000F4902C /* menu_controller.swift */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		18AA5CC2249A000300F4902C /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		18AA5CC3249A001A00F4902C /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		E84CF0C42498B38E00136D6C = {
@@ -139,17 +117,16 @@
 		E84CF0CF2498B38E00136D6C /* fogerp */ = {
 			isa = PBXGroup;
 			children = (
-				18AA5CC3249A001A00F4902C /* view */,
-				18AA5CC2249A000300F4902C /* model */,
-				18AA5CC12499FFFB00F4902C /* controller */,
-				18AA5CC02499FFE000F4902C /* utils */,
+				18AA5CCC249A280D00F4902C /* SWRevealViewController */,
 				E84CF0D02498B38E00136D6C /* AppDelegate.swift */,
+				18AA5CD1249A2AB400F4902C /* ViewController_Menu.swift */,
 				E84CF0D22498B38E00136D6C /* ViewController.swift */,
 				E84CF0D42498B38E00136D6C /* Main.storyboard */,
 				E84CF0D72498B39000136D6C /* Assets.xcassets */,
 				E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */,
 				E84CF0DC2498B39000136D6C /* Info.plist */,
 				E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */,
+				18AA5CD3249A2AF700F4902C /* ViewController_DashBoard.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -240,6 +217,7 @@
 				TargetAttributes = {
 					E84CF0CC2498B38E00136D6C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					E84CF0E02498B39000136D6C = {
 						CreatedOnToolsVersion = 10.1;
@@ -304,12 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
-				18AA5CCB249A097800F4902C /* protocols.swift in Sources */,
+				18AA5CD4249A2AF700F4902C /* ViewController_DashBoard.swift in Sources */,
 				E84CF0D32498B38E00136D6C /* ViewController.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,
-				18AA5CC7249A003C00F4902C /* home_controller.swift in Sources */,
-				18AA5CC9249A005000F4902C /* menu_controller.swift in Sources */,
-				18AA5CC5249A002F00F4902C /* Container_controller.swift in Sources */,
+				18AA5CD0249A29A100F4902C /* SWRevealViewController.m in Sources */,
+				18AA5CD2249A2AB400F4902C /* ViewController_Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XKFR6DCSV;
 				INFOPLIST_FILE = fogerp/Info.plist;
@@ -493,6 +471,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kachhua.fogerp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "fogerp/SWRevealViewController/fogerp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XKFR6DCSV;
 				INFOPLIST_FILE = fogerp/Info.plist;
@@ -511,6 +492,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kachhua.fogerp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "fogerp/SWRevealViewController/fogerp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
