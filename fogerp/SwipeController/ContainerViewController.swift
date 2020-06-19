@@ -29,7 +29,8 @@
 import UIKit
 
 class ContainerViewController: UIViewController {
-  enum SlideOutState {
+ 
+    enum SlideOutState {
     case bothCollapsed
     case leftPanelExpanded
     case rightPanelExpanded
@@ -44,6 +45,7 @@ class ContainerViewController: UIViewController {
       showShadowForCenterViewController(shouldShowShadow)
     }
   }
+    
   var leftViewController: Left_SidePanelViewController?
   var rightViewController: Right_SidePanelViewController?
   
@@ -57,20 +59,17 @@ class ContainerViewController: UIViewController {
     centerViewController = UIStoryboard.centerViewController()
     centerViewController.delegate = self
     
-    // wrap the centerViewController in a navigation controller, so we can push views to it
-    // and display bar button items in the navigation bar
     centerNavigationController = UINavigationController(rootViewController: centerViewController)
     view.addSubview(centerNavigationController.view)
     addChild(centerNavigationController)
-    
     centerNavigationController.didMove(toParent: self)
     
-   // let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
-    //centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+
   }
 }
 
 private extension UIStoryboard {
+    
   static func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: Bundle.main) }
   
   static func leftViewController() -> Left_SidePanelViewController? {
@@ -86,124 +85,149 @@ private extension UIStoryboard {
   }
 }
 
-// MARK: CenterViewController delegate
 
 extension ContainerViewController: CenterViewControllerDelegate {
   
+    ///////////////// from center view controller ////////
+    func collapseSidePanels()
+        {
+            switch currentState
+            {
+                case .rightPanelExpanded:
+                    toggleRightPanel()
+                case .leftPanelExpanded:
+                    toggleLeftPanel()
+                default:
+                    break
+            }
+       }
+    
+    
+    
+     ///////////////// from center view controller ////////
     func toggleLeftPanel()
-    {
-        let notAlreadyExpanded = (currentState != .leftPanelExpanded)
-        if notAlreadyExpanded
         {
-            addLeftPanelViewController()
+            let notAlreadyExpanded = (currentState != .leftPanelExpanded)
+            if notAlreadyExpanded { addLeftPanelViewController() }
+            animateLeftPanel(shouldExpand: notAlreadyExpanded)
         }
-
-        animateLeftPanel(shouldExpand: notAlreadyExpanded)
-   }
+    
+    
+    
+    
+    ///////////////// from center view controller ////////
+   func toggleRightPanel()
+       {
+            let notAlreadyExpanded = (currentState != .rightPanelExpanded)
+            if notAlreadyExpanded { addRightPanelViewController() }
+            animateRightPanel(shouldExpand: notAlreadyExpanded)
+      }
+    
   
-  func addLeftPanelViewController()
-  {
+    
+   
+    //////////// declared in this controller only /////////
+   func addLeftPanelViewController()
+     {
         guard leftViewController == nil else { return }
-
-        if let vc = UIStoryboard.leftViewController() {
-         
-          addChildSidePanelController(vc)
-          leftViewController = vc
-        }
-  }
+        if let vc = UIStoryboard.leftViewController()
+            {
+              addChildSidePanelController(vc)
+              leftViewController = vc
+            }
+    }
   
+    
+    
+    //////////// declared in this controller only /////////
   func animateLeftPanel(shouldExpand: Bool)
-  {
-        if shouldExpand
-        {
-          currentState = .leftPanelExpanded
-          animateCenterPanelXPosition(
-            targetPosition: centerNavigationController.view.frame.width - Offset_For_Leftside)
-        }
-        else
-        {
-          animateCenterPanelXPosition(targetPosition: 0)
-          { _ in
-            self.currentState = .bothCollapsed
-            self.leftViewController?.view.removeFromSuperview()
-            self.leftViewController = nil
+       {
+            if shouldExpand
+              {
+                  currentState = .leftPanelExpanded
+                  animateCenterPanelXPosition(targetPosition: centerNavigationController.view.frame.width - Offset_For_Leftside)
+              }
+            else
+             {
+                  animateCenterPanelXPosition(targetPosition: 0)
+                      { _ in
+                      
+                        self.currentState = .bothCollapsed
+                        self.leftViewController?.view.removeFromSuperview()
+                        self.leftViewController = nil
+                      }
+             }
+      }
+  
+  
+  
+            //////////// declared in this controller only /////////
+          func addRightPanelViewController() {
+            guard rightViewController == nil else { return }
+            
+            if let vc = UIStoryboard.rightViewController() {
+              //vc.view.frame.size.width = vc.view.frame.width/2
+              right_addChildSidePanelController(vc)
+              rightViewController = vc
+            }
           }
-        }
-  }
-  
-  func toggleRightPanel() {
-    let notAlreadyExpanded = (currentState != .rightPanelExpanded)
 
-    if notAlreadyExpanded {
-      addRightPanelViewController()
-    }
-
-    animateRightPanel(shouldExpand: notAlreadyExpanded)
-  }
-  
-  func addRightPanelViewController() {
-    guard rightViewController == nil else { return }
     
-    if let vc = UIStoryboard.rightViewController() {
-      //vc.view.frame.size.width = vc.view.frame.width/2
-      right_addChildSidePanelController(vc)
-      rightViewController = vc
-    }
-  }
-
-  func animateRightPanel(shouldExpand: Bool) {
-    if shouldExpand
-      {
-        currentState = .rightPanelExpanded
-        animateCenterPanelXPosition(
-        targetPosition: -centerNavigationController.view.frame.width + Offset_For_Rightside)
+        //////////// declared in this controller only /////////
+      func animateRightPanel(shouldExpand: Bool) {
+        if shouldExpand
+          {
+            currentState = .rightPanelExpanded
+            animateCenterPanelXPosition(
+            targetPosition: -centerNavigationController.view.frame.width + Offset_For_Rightside)
+          }
+        else
+            {
+             animateCenterPanelXPosition(targetPosition: 0)
+             { _ in
+                 self.currentState = .bothCollapsed
+                 self.rightViewController?.view.removeFromSuperview()
+                 self.rightViewController = nil
+            }
+          }
       }
-    else
-        {
-         animateCenterPanelXPosition(targetPosition: 0)
-         { _ in
-             self.currentState = .bothCollapsed
-             self.rightViewController?.view.removeFromSuperview()
-             self.rightViewController = nil
-        }
-      }
-  }
-  
-  func collapseSidePanels() {
-    switch currentState {
-    case .rightPanelExpanded:
-      toggleRightPanel()
-    case .leftPanelExpanded:
-      toggleLeftPanel()
-    default:
-      break
-    }
-  }
   
     
-  func animateCenterPanelXPosition(targetPosition: CGFloat, completion: ((Bool) -> Void)? = nil) {
-    UIView.animate(withDuration: 0.5,
-                   delay: 0,
-                   usingSpringWithDamping: 0.8,
-                   initialSpringVelocity: 0,
-                   options: .curveEaseInOut, animations: {
-                     self.centerNavigationController.view.frame.origin.x = targetPosition
-    }, completion: completion)
-  }
-  
-      func addChildSidePanelController(_ sidePanelController: Left_SidePanelViewController) {
-        sidePanelController.delegate = centerViewController
-        view.insertSubview(sidePanelController.view, at: 0)
-        addChild(sidePanelController)
-        sidePanelController.didMove(toParent: self)
+    
+       //////////// declared in this controller only /////////
+      func animateCenterPanelXPosition(targetPosition: CGFloat, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseInOut, animations: {
+                    self.centerNavigationController.view.frame.origin.x = targetPosition
+        }, completion: completion)
       }
   
+    
+    
+    
+    
+    //////////// declared in this controller only /////////
+     func addChildSidePanelController(_ sidePanelController: Left_SidePanelViewController) {
+            sidePanelController.delegate = centerViewController
+            view.insertSubview(sidePanelController.view, at: 0)
+            addChild(sidePanelController)
+            sidePanelController.didMove(toParent: self)
+          }
+  
+ 
+    //////////// declared in this controller only /////////
     func right_addChildSidePanelController(_ sidePanelController: Right_SidePanelViewController) {
         sidePanelController.delegate = centerViewController
         view.insertSubview(sidePanelController.view, at: 0)
         addChild(sidePanelController)
         sidePanelController.didMove(toParent: self)
     }
+    
+    
+    
     
   func showShadowForCenterViewController(_ shouldShowShadow: Bool) {
     if shouldShowShadow {
@@ -212,6 +236,12 @@ extension ContainerViewController: CenterViewControllerDelegate {
       centerNavigationController.view.layer.shadowOpacity = 0.0
     }
   }
+    
+    
+    
+    
+    
+    
 }
 
 // MARK: Gesture recognizer

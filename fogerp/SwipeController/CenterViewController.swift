@@ -32,43 +32,63 @@ class CenterViewController: UIViewController {
     
     @IBOutlet weak var TaskListContainer: UIView!
     
-  var delegate: CenterViewControllerDelegate?
+    @IBOutlet weak var Btn_Me: UIButton!
+    @IBOutlet weak var Btn_Team: UIButton!
+    
+    @IBOutlet weak var Btn_all: UIButton!
+    @IBOutlet weak var Btn_Major: UIButton!
+    @IBOutlet weak var Btn_Minor: UIButton!
+    
+    @IBOutlet weak var Btn_All_s: UIButton!
+    @IBOutlet weak var Btn_Low: UIButton!
+    @IBOutlet weak var Btn_Normal: UIButton!
+    @IBOutlet weak var Btn_High: UIButton!
+    
+    
+    var delegate: CenterViewControllerDelegate?
   
   // MARK: Button actions  
-    @IBAction func leftbuttonclick(_ sender: Any) {
-        delegate?.toggleLeftPanel()
-
-    }
-    @IBAction func rightbuttonclick(_ sender: Any) {
-        delegate?.toggleRightPanel()
-
-    }
+    @IBAction func leftbuttonclick(_ sender: Any) {  delegate?.toggleLeftPanel() }
+    @IBAction func rightbuttonclick(_ sender: Any) { delegate?.toggleRightPanel() }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         TaskListContainer.roundCorners(corners: [.topLeft,.topRight], radius: 60.0)
+        Btn_Me.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
+        Btn_Team.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
+        
+        Btn_all.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
+        Btn_Minor.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
+        
+        
+        Btn_All_s.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
+        Btn_High.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
+        
+        
+        
+        //Btn_Me.backgroundColor = UIColor .white
+        
     }
    
 }
 
 extension CenterViewController: Left_SidePanelViewControllerDelegate,Right_SidePanelViewControllerDelegate {
-    func clickeventfrom_right()
-    {
-        delegate?.collapseSidePanels()
-    }
-    
-  func clickeventfrom_left()
-  {
-    delegate?.collapseSidePanels()
-  }
+    func clickeventfrom_right()  {  delegate?.collapseSidePanels()    }
+    func clickeventfrom_left()   {  delegate?.collapseSidePanels()    }
+
 }
+
+
 
 protocol CenterViewControllerDelegate {
   func toggleLeftPanel()
   func toggleRightPanel()
   func collapseSidePanels()
 }
+
+
+
 
 extension UIView {
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
