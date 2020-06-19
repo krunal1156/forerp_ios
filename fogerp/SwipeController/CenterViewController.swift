@@ -29,10 +29,9 @@
 import UIKit
 
 class CenterViewController: UIViewController {
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var creatorLabel: UILabel!
-  
+    
+    @IBOutlet weak var TaskListContainer: UIView!
+    
   var delegate: CenterViewControllerDelegate?
   
   // MARK: Button actions  
@@ -43,6 +42,12 @@ class CenterViewController: UIViewController {
     @IBAction func rightbuttonclick(_ sender: Any) {
         delegate?.toggleRightPanel()
 
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        TaskListContainer.roundCorners(corners: [.topLeft,.topRight], radius: 60.0)
     }
    
 }
@@ -63,4 +68,13 @@ protocol CenterViewControllerDelegate {
   func toggleLeftPanel()
   func toggleRightPanel()
   func collapseSidePanels()
+}
+
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
 }

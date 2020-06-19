@@ -47,8 +47,10 @@ class ContainerViewController: UIViewController {
   var leftViewController: Left_SidePanelViewController?
   var rightViewController: Right_SidePanelViewController?
   
-  let centerPanelExpandedOffset: CGFloat = 90
-  
+  let Offset_For_Rightside: CGFloat = 200
+  let Offset_For_Leftside: CGFloat = 90
+
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -116,7 +118,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
         {
           currentState = .leftPanelExpanded
           animateCenterPanelXPosition(
-            targetPosition: centerNavigationController.view.frame.width - centerPanelExpandedOffset)
+            targetPosition: centerNavigationController.view.frame.width - Offset_For_Leftside)
         }
         else
         {
@@ -143,7 +145,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
     guard rightViewController == nil else { return }
     
     if let vc = UIStoryboard.rightViewController() {
-      
+      //vc.view.frame.size.width = vc.view.frame.width/2
       right_addChildSidePanelController(vc)
       rightViewController = vc
     }
@@ -154,7 +156,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
       {
         currentState = .rightPanelExpanded
         animateCenterPanelXPosition(
-        targetPosition: -centerNavigationController.view.frame.width + centerPanelExpandedOffset)
+        targetPosition: -centerNavigationController.view.frame.width + Offset_For_Rightside)
       }
     else
         {
