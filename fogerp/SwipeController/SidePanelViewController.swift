@@ -31,8 +31,9 @@ import UIKit
 class Left_SidePanelViewController: UIViewController {
   
   
-    @IBAction func test(_ sender: UIButton) {
-        delegate?.clickeventfrom_left()
+  
+    @IBAction func closemenu(_ sender: Any) {
+         delegate?.clickeventfrom_left()
     }
     
     var delegate: Left_SidePanelViewControllerDelegate?
@@ -45,6 +46,6 @@ class Left_SidePanelViewController: UIViewController {
 
 
 
-protocol Left_SidePanelViewControllerDelegate {
+protocol Left_SidePanelViewControllerDelegate  {
   func clickeventfrom_left()
 }

@@ -44,6 +44,8 @@ class CenterViewController: UIViewController {
     @IBOutlet weak var Btn_Normal: UIButton!
     @IBOutlet weak var Btn_High: UIButton!
     
+    @IBOutlet weak var Btn_All_d: UIButton!
+    @IBOutlet weak var Btn_This_week: UIButton!
     
     var delegate: CenterViewControllerDelegate?
   
@@ -65,17 +67,19 @@ class CenterViewController: UIViewController {
         Btn_All_s.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
         Btn_High.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
         
+        Btn_All_d.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
+        Btn_This_week.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
         
         
-        //Btn_Me.backgroundColor = UIColor .white
         
     }
    
 }
 
-extension CenterViewController: Left_SidePanelViewControllerDelegate,Right_SidePanelViewControllerDelegate {
+extension CenterViewController:Left_SidePanelViewControllerDelegate,Right_SidePanelViewControllerDelegate {
     func clickeventfrom_right()  {  delegate?.collapseSidePanels()    }
     func clickeventfrom_left()   {  delegate?.collapseSidePanels()    }
+    
 
 }
 

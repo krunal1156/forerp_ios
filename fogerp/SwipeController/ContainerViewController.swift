@@ -1,32 +1,5 @@
-/// Copyright (c) 2019 Razeware LLC
-///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
-
 import UIKit
+
 
 class ContainerViewController: UIViewController {
  
@@ -38,6 +11,8 @@ class ContainerViewController: UIViewController {
   
   var centerNavigationController: UINavigationController!
   var centerViewController: CenterViewController!
+  var acknowledgement_controller : Acknowledgement_ViewController!
+    
   
   var currentState: SlideOutState = .bothCollapsed {
     didSet {
@@ -59,13 +34,14 @@ class ContainerViewController: UIViewController {
     centerViewController = UIStoryboard.centerViewController()
     centerViewController.delegate = self
     
-    centerNavigationController = UINavigationController(rootViewController: centerViewController)
+    centerNavigationController = UINavigationController(rootViewController:centerViewController)
     view.addSubview(centerNavigationController.view)
     addChild(centerNavigationController)
     centerNavigationController.didMove(toParent: self)
     
 
   }
+    
 }
 
 private extension UIStoryboard {
@@ -83,11 +59,28 @@ private extension UIStoryboard {
   static func centerViewController() -> CenterViewController? {
     return mainStoryboard().instantiateViewController(withIdentifier: "CenterViewController") as? CenterViewController
   }
+  
+    static func acknowledgement_Viewcontroller() -> Acknowledgement_ViewController? {
+        return mainStoryboard().instantiateViewController(withIdentifier: "Acknowledgement_ViewController") as? Acknowledgement_ViewController
+    }
 }
 
 
 extension ContainerViewController: CenterViewControllerDelegate {
   
+    ////////////// test ///////////////////////
+    func changeViewcontroller(){
+        
+        acknowledgement_controller = UIStoryboard.acknowledgement_Viewcontroller()
+        centerNavigationController = UINavigationController(rootViewController:acknowledgement_controller)
+        view.addSubview(centerNavigationController.view)
+        addChild(centerNavigationController)
+        centerNavigationController.didMove(toParent: self)
+        
+        print("test check " )
+    }
+    
+    
     ///////////////// from center view controller ////////
     func collapseSidePanels()
         {
@@ -100,6 +93,9 @@ extension ContainerViewController: CenterViewControllerDelegate {
                 default:
                     break
             }
+            print("test check 3")
+            changeViewcontroller()
+
        }
     
     
