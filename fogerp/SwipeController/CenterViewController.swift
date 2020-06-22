@@ -47,16 +47,36 @@ class CenterViewController: UIViewController {
     @IBOutlet weak var Btn_All_d: UIButton!
     @IBOutlet weak var Btn_This_week: UIButton!
     
+    let backgroundImageView = UIImageView()
+    
     var delegate: CenterViewControllerDelegate?
   
   // MARK: Button actions  
     @IBAction func leftbuttonclick(_ sender: Any) {  delegate?.toggleLeftPanel() }
     @IBAction func rightbuttonclick(_ sender: Any) { delegate?.toggleRightPanel() }
     
+    @IBAction func btn_report_click(_ sender: Any) {
+        delegate?.toggleRightPanel()
+    }
+    @IBAction func btn_type_click(_ sender: Any) {
+        delegate?.toggleLeftPanel()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo:view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo:view.trailingAnchor).isActive = true
+        backgroundImageView.image = UIImage(named :"newbgtwo.png")
+        view.sendSubviewToBack(backgroundImageView)
+
         TaskListContainer.roundCorners(corners: [.topLeft,.topRight], radius: 60.0)
+        
+        /*
         Btn_Me.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
         Btn_Team.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
         
@@ -69,11 +89,15 @@ class CenterViewController: UIViewController {
         
         Btn_All_d.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
         Btn_This_week.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
-        
+        */
         
         
     }
    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
 }
 
 extension CenterViewController:Left_SidePanelViewControllerDelegate,Right_SidePanelViewControllerDelegate {
