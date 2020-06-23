@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18AA5CD0249A29A100F4902C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CCF249A29A100F4902C /* SWRevealViewController.m */; };
-		18AA5CD2249A2AB400F4902C /* ViewController_Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD1249A2AB400F4902C /* ViewController_Menu.swift */; };
-		18AA5CD4249A2AF700F4902C /* ViewController_DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD3249A2AF700F4902C /* ViewController_DashBoard.swift */; };
+		181842DD24A1D5B300441E08 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DC24A1D5B300441E08 /* CardView.swift */; };
+		181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */; };
 		18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD6249B527F00F4902C /* SidePanelViewController.swift */; };
 		18AA5CDD249B528000F4902C /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD8249B528000F4902C /* CenterViewController.swift */; };
 		18AA5CDF249B528000F4902C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CDA249B528000F4902C /* ContainerViewController.swift */; };
 		18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CE6249B5BBB00F4902C /* Right_SidePanelViewController.swift */; };
 		18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */; };
 		E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D02498B38E00136D6C /* AppDelegate.swift */; };
-		E84CF0D32498B38E00136D6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D22498B38E00136D6C /* ViewController.swift */; };
 		E84CF0D62498B38E00136D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D42498B38E00136D6C /* Main.storyboard */; };
 		E84CF0D82498B39000136D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D72498B39000136D6C /* Assets.xcassets */; };
 		E84CF0DB2498B39000136D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */; };
@@ -43,11 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18AA5CCD249A29A000F4902C /* fogerp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fogerp-Bridging-Header.h"; sourceTree = "<group>"; };
-		18AA5CCE249A29A100F4902C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../Hrms/Hrms/CustomComponent/SWRevealViewController.h; sourceTree = "<group>"; };
-		18AA5CCF249A29A100F4902C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Hrms/Hrms/CustomComponent/SWRevealViewController.m; sourceTree = "<group>"; };
-		18AA5CD1249A2AB400F4902C /* ViewController_Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Menu.swift; sourceTree = "<group>"; };
-		18AA5CD3249A2AF700F4902C /* ViewController_DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_DashBoard.swift; sourceTree = "<group>"; };
+		181842DC24A1D5B300441E08 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_tasklist_Dashboard.swift; sourceTree = "<group>"; };
 		18AA5CD6249B527F00F4902C /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		18AA5CD8249B528000F4902C /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		18AA5CDA249B528000F4902C /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +50,6 @@
 		18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgement_ViewController.swift; sourceTree = "<group>"; };
 		E84CF0CD2498B38E00136D6C /* fogerp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fogerp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CF0D02498B38E00136D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E84CF0D22498B38E00136D6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E84CF0D52498B38E00136D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E84CF0D72498B39000136D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E84CF0DA2498B39000136D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,16 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18AA5CCC249A280D00F4902C /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				18AA5CCE249A29A100F4902C /* SWRevealViewController.h */,
-				18AA5CCF249A29A100F4902C /* SWRevealViewController.m */,
-				18AA5CCD249A29A000F4902C /* fogerp-Bridging-Header.h */,
-			);
-			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		18AA5CD5249B4FAF00F4902C /* SwipeController */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,16 +124,14 @@
 			isa = PBXGroup;
 			children = (
 				18AA5CD5249B4FAF00F4902C /* SwipeController */,
-				18AA5CCC249A280D00F4902C /* SWRevealViewController */,
 				E84CF0D02498B38E00136D6C /* AppDelegate.swift */,
-				18AA5CD1249A2AB400F4902C /* ViewController_Menu.swift */,
-				E84CF0D22498B38E00136D6C /* ViewController.swift */,
 				E84CF0D42498B38E00136D6C /* Main.storyboard */,
 				E84CF0D72498B39000136D6C /* Assets.xcassets */,
 				E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */,
 				E84CF0DC2498B39000136D6C /* Info.plist */,
 				E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */,
-				18AA5CD3249A2AF700F4902C /* ViewController_DashBoard.swift */,
+				181842DC24A1D5B300441E08 /* CardView.swift */,
+				181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -306,15 +288,13 @@
 			files = (
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
 				18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */,
-				18AA5CD4249A2AF700F4902C /* ViewController_DashBoard.swift in Sources */,
-				E84CF0D32498B38E00136D6C /* ViewController.swift in Sources */,
 				18AA5CDF249B528000F4902C /* ContainerViewController.swift in Sources */,
 				18AA5CDD249B528000F4902C /* CenterViewController.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,
+				181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */,
 				18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */,
 				18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */,
-				18AA5CD0249A29A100F4902C /* SWRevealViewController.m in Sources */,
-				18AA5CD2249A2AB400F4902C /* ViewController_Menu.swift in Sources */,
+				181842DD24A1D5B300441E08 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

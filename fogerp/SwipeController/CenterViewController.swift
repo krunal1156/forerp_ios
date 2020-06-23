@@ -28,10 +28,32 @@
 
 import UIKit
 
-class CenterViewController: UIViewController {
+class CenterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return(10)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleRow_tasklist_Dashboard")as!SingleRow_tasklist_Dashboard
+        
+        
+        return cell
+        
+        
+        
+        
+        
+    }
+    
+    
+    @IBOutlet weak var table_view: UITableView!
     @IBOutlet weak var TaskListContainer: UIView!
-    
     @IBOutlet weak var Btn_Me: UIButton!
     @IBOutlet weak var Btn_Team: UIButton!
     
@@ -45,7 +67,7 @@ class CenterViewController: UIViewController {
     @IBOutlet weak var Btn_High: UIButton!
     
     @IBOutlet weak var Btn_All_d: UIButton!
-    @IBOutlet weak var Btn_This_week: UIButton!
+    @IBOutlet weak var Btn_This_month: UIButton!
     
     let backgroundImageView = UIImageView()
     
@@ -65,6 +87,7 @@ class CenterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         view.addSubview(backgroundImageView)
         backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         backgroundImageView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
@@ -76,7 +99,7 @@ class CenterViewController: UIViewController {
 
         TaskListContainer.roundCorners(corners: [.topLeft,.topRight], radius: 60.0)
         
-        /*
+       
         Btn_Me.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
         Btn_Team.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
         
@@ -86,10 +109,12 @@ class CenterViewController: UIViewController {
         
         Btn_All_s.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
         Btn_High.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
+      
         
         Btn_All_d.roundCorners(corners: [.topLeft,.bottomLeft], radius: 30.0)
-        Btn_This_week.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
-        */
+        Btn_This_month.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
+ 
+ 
         
         
     }
