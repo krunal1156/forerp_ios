@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		181842DD24A1D5B300441E08 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DC24A1D5B300441E08 /* CardView.swift */; };
 		181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */; };
+		18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */; };
+		18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */; };
+		18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */; };
 		18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD6249B527F00F4902C /* SidePanelViewController.swift */; };
 		18AA5CDD249B528000F4902C /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CD8249B528000F4902C /* CenterViewController.swift */; };
 		18AA5CDF249B528000F4902C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CDA249B528000F4902C /* ContainerViewController.swift */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		181842DC24A1D5B300441E08 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_tasklist_Dashboard.swift; sourceTree = "<group>"; };
+		18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Acknowledgement.swift; sourceTree = "<group>"; };
+		18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatus_ViewController.swift; sourceTree = "<group>"; };
+		18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LeaveStatus_TableViewCell.swift; sourceTree = "<group>"; };
 		18AA5CD6249B527F00F4902C /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		18AA5CD8249B528000F4902C /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		18AA5CDA249B528000F4902C /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 				18AA5CD6249B527F00F4902C /* SidePanelViewController.swift */,
 				18AA5CE6249B5BBB00F4902C /* Right_SidePanelViewController.swift */,
 				18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */,
+				18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */,
+				18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */,
 			);
 			path = SwipeController;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 				E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */,
 				181842DC24A1D5B300441E08 /* CardView.swift */,
 				181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */,
+				18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -290,9 +299,12 @@
 				18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */,
 				18AA5CDF249B528000F4902C /* ContainerViewController.swift in Sources */,
 				18AA5CDD249B528000F4902C /* CenterViewController.swift in Sources */,
+				18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,
 				181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */,
+				18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */,
 				18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */,
+				18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */,
 				18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */,
 				181842DD24A1D5B300441E08 /* CardView.swift in Sources */,
 			);
@@ -479,7 +491,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kachhua.fogerp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "fogerp/SWRevealViewController/fogerp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +511,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kachhua.fogerp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "fogerp/SWRevealViewController/fogerp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

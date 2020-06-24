@@ -8,44 +8,37 @@
 
 import UIKit
 
-class Acknowledgement_ViewController: UIViewController {
-
-    @IBAction func btn_leftmenu(_ sender: UIBarButtonItem) {
-        clickeventfrom_left()
-        print("test left click")
+class Acknowledgement_ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
-    @IBAction func btn_rightmenu(_ sender: Any) {
-      
-        clickeventfrom_right()
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "SingleRow_Acknowledgement")as! SingleRow_Acknowledgement
+    
+        return cell
     }
     
     
-    var delegate: TestDelegate?
-
-   
-    override func viewDidLoad() {
+    @IBOutlet weak var tableView: UITableView!
+    
+   override func viewDidLoad() {
         super.viewDidLoad()
+    self.navigationController?.isNavigationBarHidden = true
+      tableView.tableFooterView = UIView()
+    
 
+    
         // Do any additional setup after loading the view.
     }
-    
-
    
+    @IBAction func btn_back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
 
-}
-extension Acknowledgement_ViewController : Left_SidePanelViewControllerDelegate,Right_SidePanelViewControllerDelegate {
-    func clickeventfrom_right()  {  delegate?.collapseSidePanels()    }
-    func clickeventfrom_left()   {  delegate?.collapseSidePanels()
-        print("test left click 2")   }
+        print("click cancel")
+
+    }
     
-    
-}
-
-
-
-protocol TestDelegate {
-    func toggleLeftPanel()
-    func toggleRightPanel()
-    func collapseSidePanels()
 }
 

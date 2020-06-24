@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController_Login: ViewController {
+class ViewController_Login: UIViewController {
 
     @IBOutlet weak var btn_ok: UIButton!
     @IBOutlet weak var edt_input: UITextField!

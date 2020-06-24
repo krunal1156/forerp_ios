@@ -31,21 +31,36 @@ import UIKit
 class Left_SidePanelViewController: UIViewController {
   
   
-  
-    @IBAction func closemenu(_ sender: Any) {
-         delegate?.clickeventfrom_left()
+    @IBAction func acknowlegmentbtn_click(_ sender: Any) {
+      
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "Acknowledgement_ViewController") as! Acknowledgement_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+        
+       
     }
+        
+    @IBAction func leavestatus_click(_ sender: Any) {
+   
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "LeaveStatus_ViewController") as! LeaveStatus_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+        
+        
+    }
+    
     
     var delegate: Left_SidePanelViewControllerDelegate?
     override func viewDidLoad() {
     super.viewDidLoad()
   }
+    
+   
 }
-
-
-
-
-
 protocol Left_SidePanelViewControllerDelegate  {
   func clickeventfrom_left()
 }

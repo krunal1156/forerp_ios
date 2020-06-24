@@ -119,15 +119,23 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
         
     }
    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+   
     
 }
 
 extension CenterViewController:Left_SidePanelViewControllerDelegate,Right_SidePanelViewControllerDelegate {
-    func clickeventfrom_right()  {  delegate?.collapseSidePanels()    }
-    func clickeventfrom_left()   {  delegate?.collapseSidePanels()    }
+    func clickeventfrom_right()  {
+        
+        delegate?.collapseSidePanels()
+        
+    }
+    func clickeventfrom_left()   {
+        
+        
+        delegate?.collapseSidePanels()
+        
+        
+    }
     
 
 }

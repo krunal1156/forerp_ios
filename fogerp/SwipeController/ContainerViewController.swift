@@ -71,13 +71,13 @@ extension ContainerViewController: CenterViewControllerDelegate {
     ////////////// test ///////////////////////
     func changeViewcontroller(){
         
-        acknowledgement_controller = UIStoryboard.acknowledgement_Viewcontroller()
+      /*  acknowledgement_controller = UIStoryboard.acknowledgement_Viewcontroller()
         centerNavigationController = UINavigationController(rootViewController:acknowledgement_controller)
         view.addSubview(centerNavigationController.view)
         addChild(centerNavigationController)
         centerNavigationController.didMove(toParent: self)
+        */
         
-        print("test check " )
     }
     
     
@@ -93,7 +93,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
                 default:
                     break
             }
-            print("test check 3")
+          
             changeViewcontroller()
 
        }
