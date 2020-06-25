@@ -41,7 +41,15 @@ class Left_SidePanelViewController: UIViewController {
         
        
     }
+    @IBAction func warningbtn_click(_ sender: Any) {
         
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "Warning_ViewController") as! Warning_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+    }
+    
     @IBAction func leavestatus_click(_ sender: Any) {
    
         delegate?.clickeventfrom_left()
@@ -53,6 +61,14 @@ class Left_SidePanelViewController: UIViewController {
         
     }
     
+    @IBAction func leads_btn_click(_ sender: Any) {
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "LeadList_ViewController") as! LeadList_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+        
+    }
     
     var delegate: Left_SidePanelViewControllerDelegate?
     override func viewDidLoad() {

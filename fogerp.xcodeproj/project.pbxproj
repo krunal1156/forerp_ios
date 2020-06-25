@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		181842DD24A1D5B300441E08 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DC24A1D5B300441E08 /* CardView.swift */; };
 		181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */; };
+		1832C46324A4661000C25289 /* LeadList_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C46224A4661000C25289 /* LeadList_ViewController.swift */; };
+		1832C46524A4663C00C25289 /* SingleRow_LeadList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C46424A4663C00C25289 /* SingleRow_LeadList.swift */; };
+		1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C624A46222005324EA /* Warning_ViewController.swift */; };
+		1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C824A46250005324EA /* SingleRow_Warning.swift */; };
 		18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */; };
 		18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */; };
 		18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */; };
@@ -46,6 +50,10 @@
 /* Begin PBXFileReference section */
 		181842DC24A1D5B300441E08 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_tasklist_Dashboard.swift; sourceTree = "<group>"; };
+		1832C46224A4661000C25289 /* LeadList_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadList_ViewController.swift; sourceTree = "<group>"; };
+		1832C46424A4663C00C25289 /* SingleRow_LeadList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LeadList.swift; sourceTree = "<group>"; };
+		1843D8C624A46222005324EA /* Warning_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warning_ViewController.swift; sourceTree = "<group>"; };
+		1843D8C824A46250005324EA /* SingleRow_Warning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Warning.swift; sourceTree = "<group>"; };
 		18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Acknowledgement.swift; sourceTree = "<group>"; };
 		18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatus_ViewController.swift; sourceTree = "<group>"; };
 		18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LeaveStatus_TableViewCell.swift; sourceTree = "<group>"; };
@@ -103,7 +111,9 @@
 				18AA5CE6249B5BBB00F4902C /* Right_SidePanelViewController.swift */,
 				18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */,
 				18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */,
-				18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */,
+				1843D8C624A46222005324EA /* Warning_ViewController.swift */,
+				1832C46224A4661000C25289 /* LeadList_ViewController.swift */,
+				1832C46424A4663C00C25289 /* SingleRow_LeadList.swift */,
 			);
 			path = SwipeController;
 			sourceTree = "<group>";
@@ -137,10 +147,12 @@
 				E84CF0D72498B39000136D6C /* Assets.xcassets */,
 				E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */,
 				E84CF0DC2498B39000136D6C /* Info.plist */,
+				18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */,
 				E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */,
 				181842DC24A1D5B300441E08 /* CardView.swift */,
 				181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */,
 				18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */,
+				1843D8C824A46250005324EA /* SingleRow_Warning.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -295,8 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1832C46324A4661000C25289 /* LeadList_ViewController.swift in Sources */,
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
 				18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */,
+				1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */,
+				1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */,
 				18AA5CDF249B528000F4902C /* ContainerViewController.swift in Sources */,
 				18AA5CDD249B528000F4902C /* CenterViewController.swift in Sources */,
 				18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */,
@@ -306,6 +321,7 @@
 				18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */,
 				18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */,
 				18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */,
+				1832C46524A4663C00C25289 /* SingleRow_LeadList.swift in Sources */,
 				181842DD24A1D5B300441E08 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
