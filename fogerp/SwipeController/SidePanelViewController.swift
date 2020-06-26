@@ -70,6 +70,34 @@ class Left_SidePanelViewController: UIViewController {
         
     }
     
+    @IBAction func view_Expense_btn_Click(_ sender: Any) {
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "View_Expense_ViewController") as! View_Expense_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func MySOP_btn_Click(_ sender: Any) {
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "MySOP_ViewController") as! MySOP_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func MyReport_btn_Click(_ sender: Any) {
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "MyReport_ViewController") as! MyReport_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+    }
+    
+    
     var delegate: Left_SidePanelViewControllerDelegate?
     override func viewDidLoad() {
     super.viewDidLoad()
