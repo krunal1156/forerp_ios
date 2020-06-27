@@ -97,6 +97,14 @@ class Left_SidePanelViewController: UIViewController {
         self.present(nextVc, animated: true, completion: nil)
     }
     
+    @IBAction func LeaveObjection_btn_Click(_ sender: Any) {
+        
+        delegate?.clickeventfrom_left()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "LeaveObjection_ViewController") as! LeaveObjection_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+    }
     
     var delegate: Left_SidePanelViewControllerDelegate?
     override func viewDidLoad() {
