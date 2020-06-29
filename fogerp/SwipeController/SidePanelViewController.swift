@@ -103,8 +103,20 @@ class Left_SidePanelViewController: UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVc = storyboard.instantiateViewController(withIdentifier: "LeaveObjection_ViewController") as! LeaveObjection_ViewController
+        
+       //  let nextVc = storyboard.instantiateViewController(withIdentifier: "LeaveDetail_ViewController") as! LeaveDetail_ViewController
         self.present(nextVc, animated: true, completion: nil)
     }
+    
+    @IBAction func MyRoutine_btn_Click(_ sender: Any) {
+        
+        delegate?.clickeventfrom_left()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "MyRoutine_ViewController") as! MyRoutine_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+    }
+    
+    
     
     var delegate: Left_SidePanelViewControllerDelegate?
     override func viewDidLoad() {

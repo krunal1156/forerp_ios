@@ -28,6 +28,9 @@
 		18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA5CE6249B5BBB00F4902C /* Right_SidePanelViewController.swift */; };
 		18B0C65624A6F67100AF3D2D /* LeaveObjection_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65524A6F67100AF3D2D /* LeaveObjection_ViewController.swift */; };
 		18B0C65824A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65724A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift */; };
+		18B0C65A24A99A3400AF3D2D /* MyRoutine_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */; };
+		18B0C65C24A99A5600AF3D2D /* SingleRow_MyRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */; };
+		18B0C66024A9B98700AF3D2D /* LeaveDetail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */; };
 		18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */; };
 		E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D02498B38E00136D6C /* AppDelegate.swift */; };
 		E84CF0D62498B38E00136D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D42498B38E00136D6C /* Main.storyboard */; };
@@ -77,6 +80,9 @@
 		18AA5CE6249B5BBB00F4902C /* Right_SidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Right_SidePanelViewController.swift; sourceTree = "<group>"; };
 		18B0C65524A6F67100AF3D2D /* LeaveObjection_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveObjection_ViewController.swift; sourceTree = "<group>"; };
 		18B0C65724A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LeaveObjectionTableViewCell.swift; sourceTree = "<group>"; };
+		18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutine_ViewController.swift; sourceTree = "<group>"; };
+		18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_MyRoutine.swift; sourceTree = "<group>"; };
+		18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveDetail_ViewController.swift; sourceTree = "<group>"; };
 		18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgement_ViewController.swift; sourceTree = "<group>"; };
 		E84CF0CD2498B38E00136D6C /* fogerp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fogerp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CF0D02498B38E00136D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 				1832C46A24A5B78B00C25289 /* MySOP_ViewController.swift */,
 				1832C46E24A5BC7900C25289 /* MyReport_ViewController.swift */,
 				18B0C65524A6F67100AF3D2D /* LeaveObjection_ViewController.swift */,
+				18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */,
+				18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */,
 			);
 			path = SwipeController;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				1832C46C24A5B7DD00C25289 /* SingleRow_MySOP.swift */,
 				1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */,
 				18B0C65724A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift */,
+				18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
 				18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */,
 				1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */,
+				18B0C65C24A99A5600AF3D2D /* SingleRow_MyRoutine.swift in Sources */,
 				1832C46924A5AACB00C25289 /* Single_Row_ViewExpense.swift in Sources */,
 				1832C46B24A5B78B00C25289 /* MySOP_ViewController.swift in Sources */,
 				1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */,
@@ -349,7 +359,9 @@
 				181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */,
 				18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */,
 				18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */,
+				18B0C66024A9B98700AF3D2D /* LeaveDetail_ViewController.swift in Sources */,
 				18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */,
+				18B0C65A24A99A3400AF3D2D /* MyRoutine_ViewController.swift in Sources */,
 				1832C46F24A5BC7900C25289 /* MyReport_ViewController.swift in Sources */,
 				18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */,
 				1832C46524A4663C00C25289 /* SingleRow_LeadList.swift in Sources */,
