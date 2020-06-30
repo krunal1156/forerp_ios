@@ -52,6 +52,22 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     
+    @IBOutlet weak var img_create_newtask: UIImageView!{
+    didSet {
+    let imageTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+    img_create_newtask.addGestureRecognizer(imageTapGestureRecognizer)
+    img_create_newtask.isUserInteractionEnabled = true
+    }
+}
+
+    @objc func imageTapped() {
+    //navigate to another view controller
+     print("image tap")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "Create_Task_ViewController") as! Create_Task_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+}
+    
     @IBOutlet weak var table_view: UITableView!
     @IBOutlet weak var TaskListContainer: UIView!
     @IBOutlet weak var Btn_Me: UIButton!
