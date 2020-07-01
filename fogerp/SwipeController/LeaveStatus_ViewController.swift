@@ -27,6 +27,25 @@ class LeaveStatus_ViewController: UIViewController,UITableViewDelegate,UITableVi
         self.dismiss(animated: true, completion: nil)
 
     }
+    
+    
+    
+    @IBOutlet weak var btn_createleave: UIImageView!{
+    didSet {
+    let imageTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+    btn_createleave.addGestureRecognizer(imageTapGestureRecognizer)
+    btn_createleave.isUserInteractionEnabled = true
+    }
+    }
+    
+    @objc func imageTapped() {
+        //navigate to another view controller
+        print("image tap")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "AddLeave_ViewController") as! AddLeave_ViewController
+        self.present(nextVc, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true

@@ -19,6 +19,7 @@
 		1832C47124A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */; };
 		1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C624A46222005324EA /* Warning_ViewController.swift */; };
 		1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C824A46250005324EA /* SingleRow_Warning.swift */; };
+		1891DFF624AC733500CAF641 /* AddLeave_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */; };
 		1893D3F124AB2CDF006C5789 /* Create_Task_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */; };
 		18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */; };
 		18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */; };
@@ -72,6 +73,7 @@
 		1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_MyReportTableViewCell.swift; sourceTree = "<group>"; };
 		1843D8C624A46222005324EA /* Warning_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warning_ViewController.swift; sourceTree = "<group>"; };
 		1843D8C824A46250005324EA /* SingleRow_Warning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Warning.swift; sourceTree = "<group>"; };
+		1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeave_ViewController.swift; sourceTree = "<group>"; };
 		1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_Task_ViewController.swift; sourceTree = "<group>"; };
 		18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Acknowledgement.swift; sourceTree = "<group>"; };
 		18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatus_ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */,
 				18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */,
 				1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */,
+				1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */,
 			);
 			path = SwipeController;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */,
 				1893D3F124AB2CDF006C5789 /* Create_Task_ViewController.swift in Sources */,
 				18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */,
+				1891DFF624AC733500CAF641 /* AddLeave_ViewController.swift in Sources */,
 				18B0C66024A9B98700AF3D2D /* LeaveDetail_ViewController.swift in Sources */,
 				18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */,
 				18B0C65A24A99A3400AF3D2D /* MyRoutine_ViewController.swift in Sources */,
