@@ -33,6 +33,9 @@
 		18B0C65A24A99A3400AF3D2D /* MyRoutine_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */; };
 		18B0C65C24A99A5600AF3D2D /* SingleRow_MyRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */; };
 		18B0C66024A9B98700AF3D2D /* LeaveDetail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */; };
+		18BADDFF24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BADDFE24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift */; };
+		18BADE0124AF1B4C00582C91 /* SingleRow_LogDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */; };
+		18BADE0324AF1DBC00582C91 /* Lead_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BADE0224AF1DBC00582C91 /* Lead_Detail_ViewController.swift */; };
 		18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */; };
 		E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D02498B38E00136D6C /* AppDelegate.swift */; };
 		E84CF0D62498B38E00136D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D42498B38E00136D6C /* Main.storyboard */; };
@@ -87,6 +90,9 @@
 		18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutine_ViewController.swift; sourceTree = "<group>"; };
 		18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_MyRoutine.swift; sourceTree = "<group>"; };
 		18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveDetail_ViewController.swift; sourceTree = "<group>"; };
+		18BADDFE24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadLog_Detail_ViewController.swift; sourceTree = "<group>"; };
+		18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LogDetails.swift; sourceTree = "<group>"; };
+		18BADE0224AF1DBC00582C91 /* Lead_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lead_Detail_ViewController.swift; sourceTree = "<group>"; };
 		18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgement_ViewController.swift; sourceTree = "<group>"; };
 		E84CF0CD2498B38E00136D6C /* fogerp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fogerp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CF0D02498B38E00136D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */,
 				1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */,
 				1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */,
+				18BADDFE24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift */,
+				18BADE0224AF1DBC00582C91 /* Lead_Detail_ViewController.swift */,
 			);
 			path = SwipeController;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */,
 				18B0C65724A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift */,
 				18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */,
+				18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -348,6 +357,8 @@
 			files = (
 				1832C46324A4661000C25289 /* LeadList_ViewController.swift in Sources */,
 				1832C46D24A5B7DD00C25289 /* SingleRow_MySOP.swift in Sources */,
+				18BADE0324AF1DBC00582C91 /* Lead_Detail_ViewController.swift in Sources */,
+				18BADE0124AF1B4C00582C91 /* SingleRow_LogDetails.swift in Sources */,
 				18B0C65624A6F67100AF3D2D /* LeaveObjection_ViewController.swift in Sources */,
 				1832C47124A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift in Sources */,
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
@@ -374,6 +385,7 @@
 				18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */,
 				1832C46524A4663C00C25289 /* SingleRow_LeadList.swift in Sources */,
 				1832C46724A5AA9900C25289 /* View_Expense_ViewController.swift in Sources */,
+				18BADDFF24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift in Sources */,
 				181842DD24A1D5B300441E08 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
