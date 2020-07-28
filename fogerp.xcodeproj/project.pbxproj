@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		181842DD24A1D5B300441E08 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DC24A1D5B300441E08 /* CardView.swift */; };
 		181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */; };
+		181DBD4724CFF6EB0040068B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DBD4624CFF6EB0040068B /* ApiClient.swift */; };
+		181DBD4B24CFF8990040068B /* PrefUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DBD4A24CFF8990040068B /* PrefUtils.swift */; };
+		181DBD4D24CFF8D10040068B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DBD4C24CFF8D10040068B /* User.swift */; };
+		181DBD4F24CFF9520040068B /* StaticKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DBD4E24CFF9520040068B /* StaticKeys.swift */; };
+		181DBD5124D018300040068B /* LoginRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DBD5024D018300040068B /* LoginRes.swift */; };
+		181DBD5D24D01D080040068B /* VarifyMobile_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DBD5C24D01D080040068B /* VarifyMobile_ViewController.swift */; };
 		1832C46324A4661000C25289 /* LeadList_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C46224A4661000C25289 /* LeadList_ViewController.swift */; };
 		1832C46524A4663C00C25289 /* SingleRow_LeadList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C46424A4663C00C25289 /* SingleRow_LeadList.swift */; };
 		1832C46724A5AA9900C25289 /* View_Expense_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C46624A5AA9900C25289 /* View_Expense_ViewController.swift */; };
@@ -66,6 +72,12 @@
 /* Begin PBXFileReference section */
 		181842DC24A1D5B300441E08 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_tasklist_Dashboard.swift; sourceTree = "<group>"; };
+		181DBD4624CFF6EB0040068B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		181DBD4A24CFF8990040068B /* PrefUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefUtils.swift; sourceTree = "<group>"; };
+		181DBD4C24CFF8D10040068B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		181DBD4E24CFF9520040068B /* StaticKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticKeys.swift; sourceTree = "<group>"; };
+		181DBD5024D018300040068B /* LoginRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRes.swift; sourceTree = "<group>"; };
+		181DBD5C24D01D080040068B /* VarifyMobile_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarifyMobile_ViewController.swift; sourceTree = "<group>"; };
 		1832C46224A4661000C25289 /* LeadList_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadList_ViewController.swift; sourceTree = "<group>"; };
 		1832C46424A4663C00C25289 /* SingleRow_LeadList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LeadList.swift; sourceTree = "<group>"; };
 		1832C46624A5AA9900C25289 /* View_Expense_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Expense_ViewController.swift; sourceTree = "<group>"; };
@@ -134,18 +146,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18AA5CD5249B4FAF00F4902C /* SwipeController */ = {
+		181DBD5224D019410040068B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				18AA5CD8249B528000F4902C /* CenterViewController.swift */,
-				18AA5CDA249B528000F4902C /* ContainerViewController.swift */,
-				18AA5CD6249B527F00F4902C /* SidePanelViewController.swift */,
-				18AA5CE6249B5BBB00F4902C /* Right_SidePanelViewController.swift */,
+				181DBD4C24CFF8D10040068B /* User.swift */,
+				181DBD5024D018300040068B /* LoginRes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		181DBD5624D019970040068B /* Activities */ = {
+			isa = PBXGroup;
+			children = (
 				18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */,
 				18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */,
 				1843D8C624A46222005324EA /* Warning_ViewController.swift */,
 				1832C46224A4661000C25289 /* LeadList_ViewController.swift */,
-				1832C46424A4663C00C25289 /* SingleRow_LeadList.swift */,
 				1832C46624A5AA9900C25289 /* View_Expense_ViewController.swift */,
 				1832C46A24A5B78B00C25289 /* MySOP_ViewController.swift */,
 				1832C46E24A5BC7900C25289 /* MyReport_ViewController.swift */,
@@ -156,6 +172,57 @@
 				1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */,
 				18BADDFE24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift */,
 				18BADE0224AF1DBC00582C91 /* Lead_Detail_ViewController.swift */,
+				E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */,
+				181DBD5C24D01D080040068B /* VarifyMobile_ViewController.swift */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		181DBD5724D019CB0040068B /* SingleRows */ = {
+			isa = PBXGroup;
+			children = (
+				18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */,
+				181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */,
+				18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */,
+				1843D8C824A46250005324EA /* SingleRow_Warning.swift */,
+				1832C46824A5AACB00C25289 /* Single_Row_ViewExpense.swift */,
+				1832C46C24A5B7DD00C25289 /* SingleRow_MySOP.swift */,
+				1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */,
+				18B0C65724A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift */,
+				18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */,
+				18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */,
+			);
+			path = SingleRows;
+			sourceTree = "<group>";
+		};
+		181DBD5824D019E30040068B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				181842DC24A1D5B300441E08 /* CardView.swift */,
+				181DBD4624CFF6EB0040068B /* ApiClient.swift */,
+				181DBD4A24CFF8990040068B /* PrefUtils.swift */,
+				181DBD4E24CFF9520040068B /* StaticKeys.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		181DBD5924D019F50040068B /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				E84CF0D42498B38E00136D6C /* Main.storyboard */,
+				E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		18AA5CD5249B4FAF00F4902C /* SwipeController */ = {
+			isa = PBXGroup;
+			children = (
+				18AA5CD8249B528000F4902C /* CenterViewController.swift */,
+				18AA5CDA249B528000F4902C /* ContainerViewController.swift */,
+				18AA5CD6249B527F00F4902C /* SidePanelViewController.swift */,
+				18AA5CE6249B5BBB00F4902C /* Right_SidePanelViewController.swift */,
+				1832C46424A4663C00C25289 /* SingleRow_LeadList.swift */,
 			);
 			path = SwipeController;
 			sourceTree = "<group>";
@@ -183,24 +250,15 @@
 		E84CF0CF2498B38E00136D6C /* fogerp */ = {
 			isa = PBXGroup;
 			children = (
+				181DBD5924D019F50040068B /* StoryBoards */,
+				181DBD5824D019E30040068B /* Utils */,
+				181DBD5724D019CB0040068B /* SingleRows */,
+				181DBD5624D019970040068B /* Activities */,
+				181DBD5224D019410040068B /* Model */,
 				18AA5CD5249B4FAF00F4902C /* SwipeController */,
 				E84CF0D02498B38E00136D6C /* AppDelegate.swift */,
-				E84CF0D42498B38E00136D6C /* Main.storyboard */,
 				E84CF0D72498B39000136D6C /* Assets.xcassets */,
-				E84CF0D92498B39000136D6C /* LaunchScreen.storyboard */,
 				E84CF0DC2498B39000136D6C /* Info.plist */,
-				18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */,
-				E8D9AC4C2498C4E6003AC7B1 /* ViewController_Login.swift */,
-				181842DC24A1D5B300441E08 /* CardView.swift */,
-				181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */,
-				18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */,
-				1843D8C824A46250005324EA /* SingleRow_Warning.swift */,
-				1832C46824A5AACB00C25289 /* Single_Row_ViewExpense.swift */,
-				1832C46C24A5B7DD00C25289 /* SingleRow_MySOP.swift */,
-				1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */,
-				18B0C65724A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift */,
-				18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */,
-				18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */,
 			);
 			path = fogerp;
 			sourceTree = "<group>";
@@ -362,27 +420,33 @@
 				18B0C65624A6F67100AF3D2D /* LeaveObjection_ViewController.swift in Sources */,
 				1832C47124A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift in Sources */,
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
+				181DBD5D24D01D080040068B /* VarifyMobile_ViewController.swift in Sources */,
 				18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */,
 				1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */,
 				18B0C65C24A99A5600AF3D2D /* SingleRow_MyRoutine.swift in Sources */,
 				1832C46924A5AACB00C25289 /* Single_Row_ViewExpense.swift in Sources */,
+				181DBD4724CFF6EB0040068B /* ApiClient.swift in Sources */,
 				1832C46B24A5B78B00C25289 /* MySOP_ViewController.swift in Sources */,
+				181DBD4D24CFF8D10040068B /* User.swift in Sources */,
 				1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */,
 				18AA5CDF249B528000F4902C /* ContainerViewController.swift in Sources */,
 				18AA5CDD249B528000F4902C /* CenterViewController.swift in Sources */,
 				18B0C65824A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift in Sources */,
 				18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */,
+				181DBD5124D018300040068B /* LoginRes.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,
 				181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */,
 				18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */,
 				1893D3F124AB2CDF006C5789 /* Create_Task_ViewController.swift in Sources */,
 				18AA5CDB249B528000F4902C /* SidePanelViewController.swift in Sources */,
 				1891DFF624AC733500CAF641 /* AddLeave_ViewController.swift in Sources */,
+				181DBD4B24CFF8990040068B /* PrefUtils.swift in Sources */,
 				18B0C66024A9B98700AF3D2D /* LeaveDetail_ViewController.swift in Sources */,
 				18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */,
 				18B0C65A24A99A3400AF3D2D /* MyRoutine_ViewController.swift in Sources */,
 				1832C46F24A5BC7900C25289 /* MyReport_ViewController.swift in Sources */,
 				18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */,
+				181DBD4F24CFF9520040068B /* StaticKeys.swift in Sources */,
 				1832C46524A4663C00C25289 /* SingleRow_LeadList.swift in Sources */,
 				1832C46724A5AA9900C25289 /* View_Expense_ViewController.swift in Sources */,
 				18BADDFF24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift in Sources */,

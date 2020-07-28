@@ -1,27 +1,18 @@
 //
-//  ViewController_Login.swift
+//  OTP_Varify_ViewController.swift
 //  fogerp
 //
-//  Created by Krunal Prajapati on 16/06/20.
+//  Created by apple on 28/07/20.
 //  Copyright © 2020 kachhua. All rights reserved.
 //
 
 import UIKit
 
-class ViewController_Login: UIViewController {
+class Varify_ViewController: UIViewController {
 
-    @IBOutlet weak var btn_ok: UIButton!
-    @IBOutlet weak var edt_input: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        edt_input.layer.cornerRadius=8
-        edt_input.textColor=UIColor.blue
-        
-        btn_ok.backgroundColor = UIColor.white
-        btn_ok.setTitleColor(UIColor.orange, for:.normal)
-        btn_ok.layer.cornerRadius=8
-        btn_ok.setTitle("Request OTP", for: .normal)
         // Do any additional setup after loading the view.
     }
     
