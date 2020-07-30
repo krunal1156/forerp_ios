@@ -798,6 +798,21 @@
             </objects>
             <point key="canvasLocation" x="-1522" y="-1120"/>
         </scene>
+        <!--Container View Controller-->
+        <scene sceneID="Y7b-KM-OA0">
+            <objects>
+                <viewController storyboardIdentifier="ContainerViewController" id="rBT-5G-XiL" customClass="ContainerViewController" customModule="fogerp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1h7-Qz-cOY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uzH-dw-M5l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnl-XX-Md3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="-2620"/>
+        </scene>
         <!--Navigation Bar -->
         <scene sceneID="VdS-6V-cg2">
             <objects>
@@ -828,20 +843,20 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d_dark_background" translatesAutoresizingMaskIntoConstraints="NO" id="XZS-lx-ru9">
-                                <rect key="frame" x="330" y="133.33333333333334" width="25" height="25.000000000000057"/>
+                                <rect key="frame" x="330" y="133.33333333333334" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="f9E-om-2Wr"/>
                                     <constraint firstAttribute="height" constant="25" id="uW6-bj-7ZY"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c_dark_background" translatesAutoresizingMaskIntoConstraints="NO" id="Uam-cY-kXe">
-                                <rect key="frame" x="293" y="133.33333333333334" width="25" height="25.000000000000057"/>
+                                <rect key="frame" x="293" y="133.33333333333334" width="25" height="25"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o_light_background" translatesAutoresizingMaskIntoConstraints="NO" id="d9h-e7-jX5">
-                                <rect key="frame" x="329" y="163.33333333333334" width="25" height="26.000000000000057"/>
+                                <rect key="frame" x="329" y="163.33333333333334" width="25" height="26"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w_dark_background" translatesAutoresizingMaskIntoConstraints="NO" id="41e-Pr-2ob">
-                                <rect key="frame" x="293" y="163.33333333333334" width="25" height="25.000000000000057"/>
+                                <rect key="frame" x="293" y="163.33333333333334" width="25" height="25"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UUy-A6-YAM">
                                 <rect key="frame" x="20" y="204.33333333333334" width="335" height="35"/>
@@ -856,6 +871,9 @@
                                                 <state key="normal" title="Me">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnMe:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="EPS-hn-Njw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgD-CL-S3O">
                                                 <rect key="frame" x="37" y="0.0" width="34" height="35"/>
@@ -864,6 +882,9 @@
                                                 <state key="normal" title="Team">
                                                     <color key="titleColor" red="1" green="0.51388378820000002" blue="0.31150320920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnTeam:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="7aU-lY-p5n"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -880,6 +901,9 @@
                                                 <state key="normal" title="All">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnAll:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="6RS-WJ-IYs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwl-Kw-dxa">
                                                 <rect key="frame" x="32.666666666666657" y="0.0" width="35" height="35"/>
@@ -888,6 +912,9 @@
                                                 <state key="normal" title="Major">
                                                     <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnMajor:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="mQj-7A-zKz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyx-CS-3ac">
                                                 <rect key="frame" x="67.666666666666657" y="0.0" width="36" height="35"/>
@@ -896,6 +923,9 @@
                                                 <state key="normal" title="Minor">
                                                     <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnMinor:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="THV-Bq-vIc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -909,6 +939,9 @@
                                                 <state key="normal" title="All">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnAlls:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="byg-aW-StD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIV-xJ-bg7">
                                                 <rect key="frame" x="33" y="0.0" width="33" height="35"/>
@@ -917,6 +950,9 @@
                                                 <state key="normal" title="Low">
                                                     <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnLow:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="iom-8z-zc1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6io-Sg-wAq">
                                                 <rect key="frame" x="66.000000000000028" y="0.0" width="45.333333333333343" height="35"/>
@@ -925,6 +961,9 @@
                                                 <state key="normal" title="Normal">
                                                     <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnNormal:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="0pd-dO-naa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mu-cS-dlX">
                                                 <rect key="frame" x="111.33333333333334" y="0.0" width="33" height="35"/>
@@ -933,6 +972,9 @@
                                                 <state key="normal" title="High">
                                                     <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="click_btnHight:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="WFv-e6-pV0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -951,6 +993,9 @@
                                         <state key="normal" title="All">
                                             <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="click_btnAllD:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="1I6-s3-Av6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJP-X7-62b">
                                         <rect key="frame" x="40.333333333333329" y="0.0" width="44.333333333333329" height="30"/>
@@ -959,6 +1004,9 @@
                                         <state key="normal" title="Today">
                                             <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="click_btnToday:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="H3c-ZJ-nAG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbn-dn-n4y">
                                         <rect key="frame" x="85.666666666666671" y="0.0" width="80.000000000000014" height="30"/>
@@ -967,6 +1015,9 @@
                                         <state key="normal" title="Tomorrow">
                                             <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="click_btnTomorrow:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="QJO-bv-HTx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2R-eG-lfF">
                                         <rect key="frame" x="166.66666666666666" y="0.0" width="82.333333333333343" height="30"/>
@@ -975,6 +1026,9 @@
                                         <state key="normal" title="This Week">
                                             <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="click_btnThisWeek:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="Knj-NB-fBa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqt-gV-e74">
                                         <rect key="frame" x="250" y="0.0" width="85" height="30"/>
@@ -983,6 +1037,9 @@
                                         <state key="normal" title="This Month">
                                             <color key="titleColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="click_btnThisMonth:" destination="BW5-k7-bUJ" eventType="touchUpInside" id="TYc-fY-IXU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1152,6 +1209,21 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="imgAssignedProfile" destination="TX6-Ff-gTF" id="TKR-Fb-svS"/>
+                                                    <outlet property="imgCreatedProfile" destination="vwW-sP-0m8" id="Ofe-Oc-PvZ"/>
+                                                    <outlet property="img_tick" destination="aId-xI-OsC" id="Ci3-7N-jFy"/>
+                                                    <outlet property="txtCreatedDate" destination="PIc-JP-t3d" id="9Ht-rR-nxe"/>
+                                                    <outlet property="txtDeadline" destination="F4r-Gi-YTF" id="VPc-S2-Ikb"/>
+                                                    <outlet property="txtDoLater" destination="gW4-cg-O2k" id="tD1-kl-6Nb"/>
+                                                    <outlet property="txtOffice" destination="YSO-E0-Txp" id="XWm-Py-S3h"/>
+                                                    <outlet property="txtOpen" destination="Yr4-Qj-xd7" id="ePO-WR-jp5"/>
+                                                    <outlet property="txtStatus" destination="Yr4-Qj-xd7" id="PCX-CY-2tw"/>
+                                                    <outlet property="txtTitle" destination="86l-mG-73X" id="B7C-Aa-rHM"/>
+                                                    <outlet property="txtType" destination="4Nl-7k-gVa" id="48A-37-buv"/>
+                                                    <outlet property="txtmarkWorking" destination="Ewc-n4-RiD" id="riZ-ll-KSU"/>
+                                                    <outlet property="txtpercentage" destination="uB0-Rm-BFL" id="NXq-uN-wit"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -1179,6 +1251,10 @@
                                             <constraint firstAttribute="width" constant="80" id="cjD-lq-Qaz"/>
                                         </constraints>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="teg-09-XQJ">
+                                        <rect key="frame" x="167" y="39" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.95682612728310512" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1267,7 +1343,9 @@
                         <outlet property="Btn_all" destination="DSm-bd-rb4" id="kTT-lx-6Iq"/>
                         <outlet property="TaskListContainer" destination="UaF-Dq-ufC" id="bp2-3a-Iuc"/>
                         <outlet property="img_create_newtask" destination="JqJ-tK-Vsh" id="EuU-YQ-BNN"/>
+                        <outlet property="progressbar" destination="teg-09-XQJ" id="6fn-ky-8HK"/>
                         <outlet property="table_view" destination="2yR-Zz-h4x" id="WR0-VH-ebN"/>
+                        <outlet property="tableview" destination="2yR-Zz-h4x" id="j4O-Y4-ewy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLU-65-IGW" userLabel="First Responder" sceneMemberID="firstResponder"/>

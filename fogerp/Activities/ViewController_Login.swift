@@ -119,9 +119,11 @@ class ViewController_Login: UIViewController {
             
             print("data  found")
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CenterViewController") as! CenterViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ContainerViewController") as! ContainerViewController
             self.present(nextViewController, animated:true, completion:nil)
             gameTimer.invalidate()
+            
+           
             
         }
         

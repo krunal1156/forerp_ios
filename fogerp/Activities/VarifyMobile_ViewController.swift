@@ -68,9 +68,10 @@ class VarifyMobile_ViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CenterViewController") as! ContainerViewController
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ContainerViewController") as! ContainerViewController
                     self.present(nextViewController, animated:true, completion:nil)
                     
+                   
                 }
                 
                 

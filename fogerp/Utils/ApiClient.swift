@@ -13,6 +13,7 @@ struct ApiClient {
     //static let baseurl:String = "http://453a3570.ngrok.io/SpringProject/api/"
     static let login : String = "emplogin"
      static let empOTPcheck : String = "empOTPcheck"
+    static let trackerlist : String = "trackerlist"
     
  
 }

@@ -23,6 +23,7 @@
 		1832C46D24A5B7DD00C25289 /* SingleRow_MySOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C46C24A5B7DD00C25289 /* SingleRow_MySOP.swift */; };
 		1832C46F24A5BC7900C25289 /* MyReport_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C46E24A5BC7900C25289 /* MyReport_ViewController.swift */; };
 		1832C47124A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */; };
+		1838A95124D12B2600A92AFB /* TrackerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838A95024D12B2600A92AFB /* TrackerList.swift */; };
 		1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C624A46222005324EA /* Warning_ViewController.swift */; };
 		1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C824A46250005324EA /* SingleRow_Warning.swift */; };
 		1891DFF624AC733500CAF641 /* AddLeave_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */; };
@@ -86,6 +87,7 @@
 		1832C46C24A5B7DD00C25289 /* SingleRow_MySOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_MySOP.swift; sourceTree = "<group>"; };
 		1832C46E24A5BC7900C25289 /* MyReport_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReport_ViewController.swift; sourceTree = "<group>"; };
 		1832C47024A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_MyReportTableViewCell.swift; sourceTree = "<group>"; };
+		1838A95024D12B2600A92AFB /* TrackerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerList.swift; sourceTree = "<group>"; };
 		1843D8C624A46222005324EA /* Warning_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warning_ViewController.swift; sourceTree = "<group>"; };
 		1843D8C824A46250005324EA /* SingleRow_Warning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Warning.swift; sourceTree = "<group>"; };
 		1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeave_ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				181DBD4C24CFF8D10040068B /* User.swift */,
 				181DBD5024D018300040068B /* LoginRes.swift */,
+				1838A95024D12B2600A92AFB /* TrackerList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				18AA5CDF249B528000F4902C /* ContainerViewController.swift in Sources */,
 				18AA5CDD249B528000F4902C /* CenterViewController.swift in Sources */,
 				18B0C65824A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift in Sources */,
+				1838A95124D12B2600A92AFB /* TrackerList.swift in Sources */,
 				18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */,
 				181DBD5124D018300040068B /* LoginRes.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,

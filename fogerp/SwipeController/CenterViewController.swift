@@ -30,19 +30,21 @@ import UIKit
 
 class CenterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    
-    
-    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return(10)
+        return(tracker_list.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleRow_tasklist_Dashboard")as!SingleRow_tasklist_Dashboard
-        
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier:"SingleRow_tasklist_Dashboard")as!SingleRow_tasklist_Dashboard
+    
+        cell.txtTitle.text = tracker_list[indexPath.row].description
+        cell.txtpercentage.text = tracker_list[indexPath.row].percentage
+        cell.txtDeadline.text = tracker_list[indexPath.row].deadline
+        cell.txtCreatedDate.text = tracker_list[indexPath.row].created_at
+       
         return cell
         
         
@@ -51,6 +53,8 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
         
     }
     
+    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var progressbar: UIActivityIndicatorView!
     
     @IBOutlet weak var img_create_newtask: UIImageView!{
     didSet {
@@ -85,8 +89,81 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var Btn_All_d: UIButton!
     @IBOutlet weak var Btn_This_month: UIButton!
     
-    let backgroundImageView = UIImageView()
+    @IBAction func click_btnMe(_ sender: Any) {
+        allocated = "My"
+          dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
     
+    @IBAction func click_btnTeam(_ sender: Any) {
+        allocated = "Team"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnAll(_ sender: Any) {
+      
+        severity = ""
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        
+    }
+    
+    @IBAction func click_btnMajor(_ sender: Any) {
+        severity = "Major"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnMinor(_ sender: Any) {
+        severity = "Minor"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnAlls(_ sender: Any) {
+        priority = ""
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnLow(_ sender: Any) {
+        priority = "Low"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnNormal(_ sender: Any) {
+        priority = "Normal"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnHight(_ sender: Any) {
+        priority = "High"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    @IBAction func click_btnAllD(_ sender: Any) {
+        day = "all"
+         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnToday(_ sender: Any) {
+        day = "today"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnTomorrow(_ sender: Any) {
+        day = "tomorrow"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    @IBAction func click_btnThisWeek(_ sender: Any) {
+        day = "this_week"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    @IBAction func click_btnThisMonth(_ sender: Any) {
+        day = "this_month"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    
+    
+    
+    
+    let backgroundImageView = UIImageView()
     var delegate: CenterViewControllerDelegate?
   
   // MARK: Button actions  
@@ -95,16 +172,30 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     @IBAction func btn_report_click(_ sender: Any) {
         delegate?.toggleRightPanel()
+        print("data  found")
     }
     @IBAction func btn_type_click(_ sender: Any) {
         delegate?.toggleLeftPanel()
+        print("data  found")
     }
+    
+    var user :User!
+    var tracker_list = [TrackerList.data]()
+    var allocated:String = "My"
+    var status:String = "Open"
+    var priority:String = ""
+    var severity:String = ""
+    var type:String = ""
+    var day:String = ""
+    var deadline:String = ""
+    var allocated_to:String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         view.addSubview(backgroundImageView)
+        user = PrefUtil.userdata() 
         backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         backgroundImageView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
         backgroundImageView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
@@ -131,7 +222,7 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
         Btn_This_month.roundCorners(corners: [.topRight,.bottomRight], radius: 30.0)
  
  
-        
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
         
     }
    
@@ -141,7 +232,6 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
 
 extension CenterViewController:Left_SidePanelViewControllerDelegate,Right_SidePanelViewControllerDelegate {
     func clickeventfrom_right()  {
-        
         delegate?.collapseSidePanels()
         
     }
@@ -153,6 +243,87 @@ extension CenterViewController:Left_SidePanelViewControllerDelegate,Right_SidePa
         
     }
     
+    
+    
+    func dataRequest(
+user_id:String,allocated:String,status:String,priority:String,severity:String,type:String,day:String,deadline:String,allocated_to:String) {
+        
+         self.progressbar.isHidden = false
+        
+        let urlToRequest = ApiClient.baseurl+ApiClient.trackerlist
+        let url4 = URL(string: urlToRequest)!
+        let session4 = URLSession.shared
+        let request = NSMutableURLRequest(url: url4)
+        request.httpMethod = "POST"
+         request.setValue("Bearer "+PrefUtil.getAccessToken(key: StaticKeys.usertoken), forHTTPHeaderField: "Authorization")
+        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+         let paramString = "user_id="+user_id+"&allocated="+allocated+"&status="+status+"&priority="+priority+"&severity="+severity+"&type="+type+"&day="+day+"&deadline="+deadline+"&allocated_to"+allocated_to
+        request.httpBody = paramString.data(using: String.Encoding.utf8)
+        
+        
+        let task = session4.dataTask(with: request as URLRequest)
+        {
+            (data, response, error) in
+            guard let  _: Data = data, let _: URLResponse = response,  error == nil
+                else
+            {
+                print("*****error")
+                return
+            }
+            
+            
+            do
+            {
+                let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                let decoder = JSONDecoder()
+                print(dataString)
+                
+                let loginres = try decoder.decode(TrackerList.self, from: data!)
+                if(loginres.success == false){
+                    self.tracker_list.removeAll()
+                }else{
+                     self.tracker_list = loginres.data
+                }
+                
+    
+                print(dataString)
+                
+                DispatchQueue.main.async {
+                    
+                    self.progressbar.stopAnimating()
+                    self.progressbar.isHidden = true
+                    self.tableview.reloadData()
+                    
+                    
+                     self.allocated = "My"
+                     self.status = "Open"
+                     self.priority = ""
+                     self.severity = ""
+                     self.type = ""
+                     self.day = ""
+                     self.deadline = ""
+                     self.allocated_to = ""
+                }
+                
+                
+            }catch let error {
+                print("Error :  \(error)")
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+        }
+        task.resume()
+        
+        
+        
+        
+    }
 
 }
 
