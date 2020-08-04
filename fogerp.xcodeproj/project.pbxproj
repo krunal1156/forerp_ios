@@ -28,6 +28,8 @@
 		1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C824A46250005324EA /* SingleRow_Warning.swift */; };
 		1891DFF624AC733500CAF641 /* AddLeave_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */; };
 		1893D3F124AB2CDF006C5789 /* Create_Task_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */; };
+		18962C6A24D936420024C29E /* WarningList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18962C6924D936420024C29E /* WarningList.swift */; };
+		18962C6C24D9468B0024C29E /* AnnouncementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18962C6B24D9468B0024C29E /* AnnouncementList.swift */; };
 		18A813EB24A324C300441353 /* SingleRow_Acknowledgement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */; };
 		18A813ED24A337CC00441353 /* LeaveStatus_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */; };
 		18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */; };
@@ -92,6 +94,8 @@
 		1843D8C824A46250005324EA /* SingleRow_Warning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Warning.swift; sourceTree = "<group>"; };
 		1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeave_ViewController.swift; sourceTree = "<group>"; };
 		1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_Task_ViewController.swift; sourceTree = "<group>"; };
+		18962C6924D936420024C29E /* WarningList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningList.swift; sourceTree = "<group>"; };
+		18962C6B24D9468B0024C29E /* AnnouncementList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementList.swift; sourceTree = "<group>"; };
 		18A813EA24A324C300441353 /* SingleRow_Acknowledgement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Acknowledgement.swift; sourceTree = "<group>"; };
 		18A813EC24A337CC00441353 /* LeaveStatus_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatus_ViewController.swift; sourceTree = "<group>"; };
 		18A813EE24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LeaveStatus_TableViewCell.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				181DBD4C24CFF8D10040068B /* User.swift */,
 				181DBD5024D018300040068B /* LoginRes.swift */,
 				1838A95024D12B2600A92AFB /* TrackerList.swift */,
+				18962C6924D936420024C29E /* WarningList.swift */,
+				18962C6B24D9468B0024C29E /* AnnouncementList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 				18BADE0124AF1B4C00582C91 /* SingleRow_LogDetails.swift in Sources */,
 				18B0C65624A6F67100AF3D2D /* LeaveObjection_ViewController.swift in Sources */,
 				1832C47124A5BC9200C25289 /* SingleRow_MyReportTableViewCell.swift in Sources */,
+				18962C6A24D936420024C29E /* WarningList.swift in Sources */,
 				E8D9AC4D2498C4E6003AC7B1 /* ViewController_Login.swift in Sources */,
 				181DBD5D24D01D080040068B /* VarifyMobile_ViewController.swift in Sources */,
 				18AA5CE7249B5BBB00F4902C /* Right_SidePanelViewController.swift in Sources */,
@@ -455,6 +462,7 @@
 				1832C46724A5AA9900C25289 /* View_Expense_ViewController.swift in Sources */,
 				18BADDFF24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift in Sources */,
 				181842DD24A1D5B300441E08 /* CardView.swift in Sources */,
+				18962C6C24D9468B0024C29E /* AnnouncementList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

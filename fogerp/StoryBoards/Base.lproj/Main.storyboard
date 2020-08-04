@@ -1340,7 +1340,14 @@
                         <outlet property="Btn_Normal" destination="6io-Sg-wAq" id="f86-4b-Yqr"/>
                         <outlet property="Btn_Team" destination="mgD-CL-S3O" id="9aU-on-B6E"/>
                         <outlet property="Btn_This_month" destination="gqt-gV-e74" id="4gY-N9-IZn"/>
+                        <outlet property="Btn_Today" destination="JJP-X7-62b" id="Jd7-qK-YZR"/>
+                        <outlet property="Btn_Tomorrow" destination="kbn-dn-n4y" id="D0K-GL-58Y"/>
                         <outlet property="Btn_all" destination="DSm-bd-rb4" id="kTT-lx-6Iq"/>
+                        <outlet property="Btn_this_Week" destination="Z2R-eG-lfF" id="iwP-Va-9cc"/>
+                        <outlet property="Img_C_Type" destination="Uam-cY-kXe" id="eSz-7l-uCl"/>
+                        <outlet property="Img_D_Type" destination="XZS-lx-ru9" id="UQJ-8H-7CM"/>
+                        <outlet property="Img_O_Type" destination="d9h-e7-jX5" id="Buz-Xi-1XA"/>
+                        <outlet property="Img_W_Type" destination="41e-Pr-2ob" id="VA4-a9-dPU"/>
                         <outlet property="TaskListContainer" destination="UaF-Dq-ufC" id="bp2-3a-Iuc"/>
                         <outlet property="img_create_newtask" destination="JqJ-tK-Vsh" id="EuU-YQ-BNN"/>
                         <outlet property="progressbar" destination="teg-09-XQJ" id="6fn-ky-8HK"/>
@@ -1377,6 +1384,10 @@
                                 <color key="textColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="nrR-LU-67c">
+                                <rect key="frame" x="177" y="396" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZvN-eM-KBE">
                                 <rect key="frame" x="5" y="84" width="365" height="689"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1446,6 +1457,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="txtBackground" destination="5hP-7L-jwE" id="LVj-Zq-Ecu"/>
+                                            <outlet property="txtDate" destination="oJt-bQ-J8B" id="vTi-2o-noF"/>
+                                            <outlet property="txtDescription" destination="Gsz-ig-83V" id="zl0-Ef-MuH"/>
+                                            <outlet property="txtTime" destination="je0-Xg-xlp" id="StJ-Mq-wXp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1470,6 +1487,7 @@
                         <viewLayoutGuide key="safeArea" id="HAA-ZO-2ah"/>
                     </view>
                     <connections>
+                        <outlet property="progressbar" destination="nrR-LU-67c" id="ku3-3p-I5K"/>
                         <outlet property="tableView" destination="ZvN-eM-KBE" id="938-Vy-MUV"/>
                     </connections>
                 </viewController>
@@ -1946,6 +1964,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="txt_Date" destination="mw2-Af-fAd" id="K4q-ao-4nu"/>
+                                            <outlet property="txt_Description" destination="aya-ic-XEJ" id="Bcz-Fg-Tge"/>
+                                            <outlet property="txt_Time" destination="Dus-2t-Ky3" id="eGw-Qo-xk7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1953,6 +1976,10 @@
                                     <outlet property="delegate" destination="OWn-yZ-ZuX" id="VZd-uM-cME"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="XWb-LQ-OQu">
+                                <rect key="frame" x="2" y="396" width="371" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1969,6 +1996,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1D8-hw-FBe"/>
                     </view>
+                    <connections>
+                        <outlet property="progressbar" destination="XWb-LQ-OQu" id="4db-8O-TKi"/>
+                        <outlet property="tableview" destination="mi9-eU-03B" id="ivW-XG-QEg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kN7-Q5-Lcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -89,14 +89,34 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var Btn_All_d: UIButton!
     @IBOutlet weak var Btn_This_month: UIButton!
     
+    @IBOutlet weak var Btn_Today: UIButton!
+    
+    @IBOutlet weak var Btn_Tomorrow: UIButton!
+    
+    @IBOutlet weak var Btn_this_Week: UIButton!
+    
+   
+    
     @IBAction func click_btnMe(_ sender: Any) {
         allocated = "My"
           dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        Btn_Me.backgroundColor = UIColor.orange
+        Btn_Me.setTitleColor(.white, for: .normal)
+        
+        Btn_Team.backgroundColor = UIColor.white
+        Btn_Team.setTitleColor(.orange, for: .normal)
     }
     
     @IBAction func click_btnTeam(_ sender: Any) {
         allocated = "Team"
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+       
+        Btn_Me.backgroundColor = UIColor.white
+        Btn_Me.setTitleColor(.orange, for: .normal)
+        
+        Btn_Team.backgroundColor = UIColor.orange
+         Btn_Team.setTitleColor(.white, for: .normal)
     }
     
     @IBAction func click_btnAll(_ sender: Any) {
@@ -105,36 +125,111 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
         
         
+        Btn_all.backgroundColor = UIColor.orange
+        Btn_all.setTitleColor(.white, for: .normal)
+        
+        Btn_Major.backgroundColor = UIColor.white
+        Btn_Major.setTitleColor(.orange, for: .normal)
+        
+        Btn_Minor.backgroundColor = UIColor.white
+        Btn_Minor.setTitleColor(.orange, for: .normal)
+        
     }
     
     @IBAction func click_btnMajor(_ sender: Any) {
         severity = "Major"
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        Btn_all.backgroundColor = UIColor.white
+        Btn_all.setTitleColor(.orange, for: .normal)
+        
+        Btn_Major.backgroundColor = UIColor.orange
+        Btn_Major.setTitleColor(.white, for: .normal)
+        
+        Btn_Minor.backgroundColor = UIColor.white
+        Btn_Minor.setTitleColor(.orange, for: .normal)
     }
     
     @IBAction func click_btnMinor(_ sender: Any) {
         severity = "Minor"
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        Btn_all.backgroundColor = UIColor.white
+        Btn_all.setTitleColor(.orange, for: .normal)
+        
+        Btn_Major.backgroundColor = UIColor.white
+        Btn_Major.setTitleColor(.orange, for: .normal)
+        
+        Btn_Minor.backgroundColor = UIColor.orange
+        Btn_Minor.setTitleColor(.white, for: .normal)
     }
     
     @IBAction func click_btnAlls(_ sender: Any) {
         priority = ""
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        Btn_All_s.backgroundColor = UIColor.orange
+        Btn_All_s.setTitleColor(.white, for: .normal)
+        
+        Btn_Low.backgroundColor = UIColor.white
+        Btn_Low.setTitleColor(.orange, for: .normal)
+        
+        Btn_Normal.backgroundColor = UIColor.white
+        Btn_Normal.setTitleColor(.orange, for: .normal)
+        
+        Btn_High.backgroundColor = UIColor.white
+        Btn_High.setTitleColor(.orange, for: .normal)
     }
     
     @IBAction func click_btnLow(_ sender: Any) {
         priority = "Low"
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        Btn_All_s.backgroundColor = UIColor.white
+        Btn_All_s.setTitleColor(.orange, for: .normal)
+        
+        Btn_Low.backgroundColor = UIColor.orange
+        Btn_Low.setTitleColor(.white, for: .normal)
+        
+        Btn_Normal.backgroundColor = UIColor.white
+        Btn_Normal.setTitleColor(.orange, for: .normal)
+        
+        Btn_High.backgroundColor = UIColor.white
+        Btn_High.setTitleColor(.orange, for: .normal)
     }
     
     @IBAction func click_btnNormal(_ sender: Any) {
         priority = "Normal"
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        Btn_All_s.backgroundColor = UIColor.white
+        Btn_All_s.setTitleColor(.orange, for: .normal)
+        
+        Btn_Low.backgroundColor = UIColor.white
+        Btn_Low.setTitleColor(.orange, for: .normal)
+        
+        Btn_Normal.backgroundColor = UIColor.orange
+        Btn_Normal.setTitleColor(.white, for: .normal)
+        
+        Btn_High.backgroundColor = UIColor.white
+        Btn_High.setTitleColor(.orange, for: .normal)
     }
     
     @IBAction func click_btnHight(_ sender: Any) {
         priority = "High"
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        
+        Btn_All_s.backgroundColor = UIColor.white
+        Btn_All_s.setTitleColor(.orange, for: .normal)
+        
+        Btn_Low.backgroundColor = UIColor.white
+        Btn_Low.setTitleColor(.orange, for: .normal)
+        
+        Btn_Normal.backgroundColor = UIColor.white
+        Btn_Normal.setTitleColor(.orange, for: .normal)
+        
+        Btn_High.backgroundColor = UIColor.orange
+        Btn_High.setTitleColor(.white, for: .normal)
     }
     @IBAction func click_btnAllD(_ sender: Any) {
         day = "all"
@@ -178,6 +273,18 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
         delegate?.toggleLeftPanel()
         print("data  found")
     }
+    
+    @IBOutlet weak var Img_D_Type: UIImageView!
+    
+    @IBOutlet weak var Img_C_Type: UIImageView!
+    
+    @IBOutlet weak var Img_O_Type: UIImageView!
+    
+    @IBOutlet weak var Img_W_Type: UIImageView!
+    
+    
+    
+    
     
     var user :User!
     var tracker_list = [TrackerList.data]()
@@ -224,9 +331,70 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
  
         dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
         
+        let tapGestureRecognizer_D = UITapGestureRecognizer(target: self, action: #selector(Imge_D_Click(tapGestureRecognizer:)))
+        Img_D_Type.isUserInteractionEnabled = true
+        Img_D_Type.addGestureRecognizer(tapGestureRecognizer_D)
+        
+        let tapGestureRecognizer_W = UITapGestureRecognizer(target: self, action: #selector(Imge_W_Click(tapGestureRecognizer:)))
+        Img_W_Type.isUserInteractionEnabled = true
+        Img_W_Type.addGestureRecognizer(tapGestureRecognizer_W)
+        
+        let tapGestureRecognizer_O = UITapGestureRecognizer(target: self, action: #selector(Imge_O_Click(tapGestureRecognizer:)))
+        Img_O_Type.isUserInteractionEnabled = true
+        Img_O_Type.addGestureRecognizer(tapGestureRecognizer_O)
+        
+        
+        let tapGestureRecognizer_C = UITapGestureRecognizer(target: self, action: #selector(Imge_C_Click(tapGestureRecognizer:)))
+        Img_C_Type.isUserInteractionEnabled = true
+        Img_C_Type.addGestureRecognizer(tapGestureRecognizer_C)
     }
    
    
+    @objc func Imge_D_Click(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        Img_D_Type.image = UIImage(named: "d_dark_background.png")
+        Img_W_Type.image = UIImage(named: "w_light_background.png")
+        Img_O_Type.image = UIImage(named: "o_light_background.png")
+        Img_C_Type.image = UIImage(named: "c_light_background.png")
+        status = "Do it Later"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+        // Your action
+    }
+    @objc func Imge_O_Click(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        Img_D_Type.image = UIImage(named: "d_light_background.png")
+        Img_W_Type.image = UIImage(named: "w_light_background.png")
+        Img_O_Type.image = UIImage(named: "o_dark_background.png")
+        Img_C_Type.image = UIImage(named: "c_light_background.png")
+        // Your action
+        status = "Open"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    @objc func Imge_W_Click(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        Img_D_Type.image = UIImage(named: "d_light_background.png")
+        Img_W_Type.image = UIImage(named: "w_dark_background.png")
+        Img_O_Type.image = UIImage(named: "o_light_background.png")
+        Img_C_Type.image = UIImage(named: "c_light_background.png")
+        // Your action
+        status = "Working"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
+    @objc func Imge_C_Click(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        Img_D_Type.image = UIImage(named: "d_light_background.png")
+        Img_W_Type.image = UIImage(named: "w_light_background.png")
+        Img_O_Type.image = UIImage(named: "o_light_background.png")
+        Img_C_Type.image = UIImage(named: "c_dark_background.png")
+        // Your action
+        
+        status = "Close"
+        dataRequest(user_id: String(user.data.user_id), allocated: allocated, status: status, priority: priority, severity:severity, type: type, day: day, deadline: deadline, allocated_to: allocated_to)
+    }
     
 }
 

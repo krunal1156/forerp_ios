@@ -10,14 +10,9 @@ import UIKit
 
 class SingleRow_Acknowledgement: UITableViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var txtDescription: UILabel!
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var txtTime: UILabel!
+    @IBOutlet weak var txtDate: UILabel!
+    @IBOutlet weak var txtBackground: UIView!
 }
