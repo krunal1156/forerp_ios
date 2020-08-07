@@ -23,27 +23,27 @@ class TrackerList: Codable {
     
     class data: Codable{
        
-        let id: Int
-        let company_id: Int
-        let department_id:Int
-        let priority: String
-        let summary: String
-        let description: String
-        let severity: String
-        let reproducibility_notes: String
-        let assigned_to: String
-        let tracker_type: String
-        let deadline: String
-        let created_by: String
-        let tag_category: String
-        let status: String
-        let percentage: String
-        let created_at: String
-        let updated_at: String
-        let assigned_to_name: String
-        let assigned_to_profile: String
-        let created_by_name: String
-        let created_by_profile: String
+        let id: Int?
+        let company_id: Int?
+        let department_id:Int?
+        let priority: String?
+        let summary: String?
+        let description: String?
+        let severity: String?
+        let reproducibility_notes: String?
+        let assigned_to: String?
+        let tracker_type: String?
+        let deadline: String?
+        let created_by: String?
+        let tag_category: String?
+        let status: String?
+        let percentage: String?
+        let created_at: String?
+        let updated_at: String?
+        let assigned_to_name: String?
+        let assigned_to_profile: String?
+        let created_by_name: String?
+        let created_by_profile: String?
         
         init?(id:Int,company_id:Int,department_id:Int,priority:String,summary:String,description:String,severity:String,reproducibility_notes:String,assigned_to:String,tracker_type:String,deadline:String,created_by:String,tag_category:String,status:String,percentage:String,created_at:String,updated_at:String,assigned_to_profile:String,created_by_name:String,created_by_profile:String,cerated_at:String){
             

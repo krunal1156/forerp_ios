@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181672AC24DD054700100514 /* CreateTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181672AB24DD054700100514 /* CreateTracker.swift */; };
 		181842DD24A1D5B300441E08 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DC24A1D5B300441E08 /* CardView.swift */; };
 		181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */; };
 		181DBD4724CFF6EB0040068B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DBD4624CFF6EB0040068B /* ApiClient.swift */; };
@@ -26,6 +27,8 @@
 		1838A95124D12B2600A92AFB /* TrackerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838A95024D12B2600A92AFB /* TrackerList.swift */; };
 		1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C624A46222005324EA /* Warning_ViewController.swift */; };
 		1843D8C924A46250005324EA /* SingleRow_Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843D8C824A46250005324EA /* SingleRow_Warning.swift */; };
+		184EDADB24DC06A100DD61BA /* Dialog_Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EDADA24DC06A100DD61BA /* Dialog_Type.swift */; };
+		184EDADD24DC0C4300DD61BA /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EDADC24DC0C4300DD61BA /* DatePickerDialog.swift */; };
 		1891DFF624AC733500CAF641 /* AddLeave_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */; };
 		1893D3F124AB2CDF006C5789 /* Create_Task_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */; };
 		18962C6A24D936420024C29E /* WarningList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18962C6924D936420024C29E /* WarningList.swift */; };
@@ -42,9 +45,12 @@
 		18B0C65A24A99A3400AF3D2D /* MyRoutine_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */; };
 		18B0C65C24A99A5600AF3D2D /* SingleRow_MyRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */; };
 		18B0C66024A9B98700AF3D2D /* LeaveDetail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */; };
+		18B0E45424DBBC170075ABC4 /* Dialog_TeamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0E45324DBBC170075ABC4 /* Dialog_TeamList.swift */; };
+		18B0E45624DBBE400075ABC4 /* SingleRow_TeamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0E45524DBBE400075ABC4 /* SingleRow_TeamList.swift */; };
 		18BADDFF24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BADDFE24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift */; };
 		18BADE0124AF1B4C00582C91 /* SingleRow_LogDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */; };
 		18BADE0324AF1DBC00582C91 /* Lead_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BADE0224AF1DBC00582C91 /* Lead_Detail_ViewController.swift */; };
+		18C68B7724DAB9AC007DCA40 /* EmpList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C68B7624DAB9AC007DCA40 /* EmpList.swift */; };
 		18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */; };
 		E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CF0D02498B38E00136D6C /* AppDelegate.swift */; };
 		E84CF0D62498B38E00136D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84CF0D42498B38E00136D6C /* Main.storyboard */; };
@@ -73,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181672AB24DD054700100514 /* CreateTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTracker.swift; sourceTree = "<group>"; };
 		181842DC24A1D5B300441E08 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		181842DE24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_tasklist_Dashboard.swift; sourceTree = "<group>"; };
 		181DBD4624CFF6EB0040068B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -92,6 +99,8 @@
 		1838A95024D12B2600A92AFB /* TrackerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerList.swift; sourceTree = "<group>"; };
 		1843D8C624A46222005324EA /* Warning_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warning_ViewController.swift; sourceTree = "<group>"; };
 		1843D8C824A46250005324EA /* SingleRow_Warning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_Warning.swift; sourceTree = "<group>"; };
+		184EDADA24DC06A100DD61BA /* Dialog_Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog_Type.swift; sourceTree = "<group>"; };
+		184EDADC24DC0C4300DD61BA /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		1891DFF524AC733500CAF641 /* AddLeave_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeave_ViewController.swift; sourceTree = "<group>"; };
 		1893D3F024AB2CDF006C5789 /* Create_Task_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_Task_ViewController.swift; sourceTree = "<group>"; };
 		18962C6924D936420024C29E /* WarningList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningList.swift; sourceTree = "<group>"; };
@@ -108,9 +117,12 @@
 		18B0C65924A99A3400AF3D2D /* MyRoutine_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutine_ViewController.swift; sourceTree = "<group>"; };
 		18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_MyRoutine.swift; sourceTree = "<group>"; };
 		18B0C65F24A9B98700AF3D2D /* LeaveDetail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveDetail_ViewController.swift; sourceTree = "<group>"; };
+		18B0E45324DBBC170075ABC4 /* Dialog_TeamList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog_TeamList.swift; sourceTree = "<group>"; };
+		18B0E45524DBBE400075ABC4 /* SingleRow_TeamList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_TeamList.swift; sourceTree = "<group>"; };
 		18BADDFE24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadLog_Detail_ViewController.swift; sourceTree = "<group>"; };
 		18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRow_LogDetails.swift; sourceTree = "<group>"; };
 		18BADE0224AF1DBC00582C91 /* Lead_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lead_Detail_ViewController.swift; sourceTree = "<group>"; };
+		18C68B7624DAB9AC007DCA40 /* EmpList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpList.swift; sourceTree = "<group>"; };
 		18DEA0AD249DD4CD0050E7EF /* Acknowledgement_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgement_ViewController.swift; sourceTree = "<group>"; };
 		E84CF0CD2498B38E00136D6C /* fogerp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fogerp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CF0D02498B38E00136D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +172,8 @@
 				1838A95024D12B2600A92AFB /* TrackerList.swift */,
 				18962C6924D936420024C29E /* WarningList.swift */,
 				18962C6B24D9468B0024C29E /* AnnouncementList.swift */,
+				18C68B7624DAB9AC007DCA40 /* EmpList.swift */,
+				181672AB24DD054700100514 /* CreateTracker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +214,7 @@
 				18B0C65724A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift */,
 				18B0C65B24A99A5600AF3D2D /* SingleRow_MyRoutine.swift */,
 				18BADE0024AF1B4C00582C91 /* SingleRow_LogDetails.swift */,
+				18B0E45524DBBE400075ABC4 /* SingleRow_TeamList.swift */,
 			);
 			path = SingleRows;
 			sourceTree = "<group>";
@@ -211,6 +226,7 @@
 				181DBD4624CFF6EB0040068B /* ApiClient.swift */,
 				181DBD4A24CFF8990040068B /* PrefUtils.swift */,
 				181DBD4E24CFF9520040068B /* StaticKeys.swift */,
+				184EDADC24DC0C4300DD61BA /* DatePickerDialog.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -236,6 +252,15 @@
 			path = SwipeController;
 			sourceTree = "<group>";
 		};
+		18C68B7124DAB026007DCA40 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				18B0E45324DBBC170075ABC4 /* Dialog_TeamList.swift */,
+				184EDADA24DC06A100DD61BA /* Dialog_Type.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E84CF0C42498B38E00136D6C = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +284,7 @@
 		E84CF0CF2498B38E00136D6C /* fogerp */ = {
 			isa = PBXGroup;
 			children = (
+				18C68B7124DAB026007DCA40 /* New Group */,
 				181DBD5924D019F50040068B /* StoryBoards */,
 				181DBD5824D019E30040068B /* Utils */,
 				181DBD5724D019CB0040068B /* SingleRows */,
@@ -435,6 +461,7 @@
 				1843D8C724A46222005324EA /* Warning_ViewController.swift in Sources */,
 				18B0C65C24A99A5600AF3D2D /* SingleRow_MyRoutine.swift in Sources */,
 				1832C46924A5AACB00C25289 /* Single_Row_ViewExpense.swift in Sources */,
+				18B0E45424DBBC170075ABC4 /* Dialog_TeamList.swift in Sources */,
 				181DBD4724CFF6EB0040068B /* ApiClient.swift in Sources */,
 				1832C46B24A5B78B00C25289 /* MySOP_ViewController.swift in Sources */,
 				181DBD4D24CFF8D10040068B /* User.swift in Sources */,
@@ -444,6 +471,7 @@
 				18B0C65824A6F6A500AF3D2D /* SingleRow_LeaveObjectionTableViewCell.swift in Sources */,
 				1838A95124D12B2600A92AFB /* TrackerList.swift in Sources */,
 				18A813EF24A33FD100441353 /* SingleRow_LeaveStatus_TableViewCell.swift in Sources */,
+				184EDADB24DC06A100DD61BA /* Dialog_Type.swift in Sources */,
 				181DBD5124D018300040068B /* LoginRes.swift in Sources */,
 				E84CF0D12498B38E00136D6C /* AppDelegate.swift in Sources */,
 				181842DF24A1D77400441E08 /* SingleRow_tasklist_Dashboard.swift in Sources */,
@@ -458,11 +486,15 @@
 				1832C46F24A5BC7900C25289 /* MyReport_ViewController.swift in Sources */,
 				18DEA0AE249DD4CD0050E7EF /* Acknowledgement_ViewController.swift in Sources */,
 				181DBD4F24CFF9520040068B /* StaticKeys.swift in Sources */,
+				18C68B7724DAB9AC007DCA40 /* EmpList.swift in Sources */,
+				184EDADD24DC0C4300DD61BA /* DatePickerDialog.swift in Sources */,
 				1832C46524A4663C00C25289 /* SingleRow_LeadList.swift in Sources */,
+				18B0E45624DBBE400075ABC4 /* SingleRow_TeamList.swift in Sources */,
 				1832C46724A5AA9900C25289 /* View_Expense_ViewController.swift in Sources */,
 				18BADDFF24AF1B2900582C91 /* LeadLog_Detail_ViewController.swift in Sources */,
 				181842DD24A1D5B300441E08 /* CardView.swift in Sources */,
 				18962C6C24D9468B0024C29E /* AnnouncementList.swift in Sources */,
+				181672AC24DD054700100514 /* CreateTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

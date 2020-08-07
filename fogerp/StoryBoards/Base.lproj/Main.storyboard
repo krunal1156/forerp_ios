@@ -3919,6 +3919,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vZq-Cx-8LW">
+                                <rect key="frame" x="177" y="396" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FR-jO-3XG">
                                 <rect key="frame" x="17" y="42" width="35" height="35"/>
                                 <constraints>
@@ -4002,6 +4006,9 @@
                                 <state key="normal" title="0%">
                                     <color key="titleColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_Btn_percentage:" destination="hHT-bU-PnS" eventType="touchUpInside" id="lhx-eG-Nxd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3O-wy-iac">
                                 <rect key="frame" x="233" y="391" width="57" height="30"/>
@@ -4010,6 +4017,9 @@
                                 <state key="normal" title=" Working ">
                                     <color key="titleColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_btn_working:" destination="hHT-bU-PnS" eventType="touchUpInside" id="WU4-vv-s0Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67h-rw-tqu">
                                 <rect key="frame" x="193" y="391" width="40" height="30"/>
@@ -4018,14 +4028,20 @@
                                 <state key="normal" title=" Open ">
                                     <color key="titleColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_Btn_open:" destination="hHT-bU-PnS" eventType="touchUpInside" id="njk-4G-5Bu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8L-zl-wb5">
                                 <rect key="frame" x="134" y="391" width="59" height="30"/>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.51388378820000002" blue="0.31150320920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title=" Do Later ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_btn_do_later:" destination="hHT-bU-PnS" eventType="touchUpInside" id="8JG-gx-Jtw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ek-gM-BWp">
                                 <rect key="frame" x="299" y="438" width="42" height="30"/>
@@ -4034,13 +4050,19 @@
                                 <state key="normal" title=" Major ">
                                     <color key="titleColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_Btn_major:" destination="hHT-bU-PnS" eventType="touchUpInside" id="WIH-8n-rub"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUw-6k-u37">
                                 <rect key="frame" x="252" y="438" width="47" height="30"/>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.51388378820000002" blue="0.31150320920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Minor ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_Btn_minor:" destination="hHT-bU-PnS" eventType="touchUpInside" id="bFz-OW-AP2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH5-ky-YJ7">
                                 <rect key="frame" x="301" y="483" width="40" height="30"/>
@@ -4048,6 +4070,9 @@
                                 <state key="normal" title=" High ">
                                     <color key="titleColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_Btn_high:" destination="hHT-bU-PnS" eventType="touchUpInside" id="9Dr-hi-2zt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe1-3p-lCz">
                                 <rect key="frame" x="243" y="483" width="58" height="30"/>
@@ -4055,13 +4080,19 @@
                                 <state key="normal" title=" Normal ">
                                     <color key="titleColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_Btn_normal:" destination="hHT-bU-PnS" eventType="touchUpInside" id="oQ9-XF-QI3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1L-WQ-GZH">
                                 <rect key="frame" x="207" y="483" width="36" height="30"/>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.075339144489999996" blue="0.055182488299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.51388378820000002" blue="0.31150320920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Low ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_btn_low:" destination="hHT-bU-PnS" eventType="touchUpInside" id="eia-Ab-Rfa"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="serch Tag here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AnD-bn-aej">
                                 <rect key="frame" x="10" y="621" width="138" height="30"/>
@@ -4134,6 +4165,7 @@
                         <viewLayoutGuide key="safeArea" id="xAo-qv-WCm"/>
                     </view>
                     <connections>
+                        <outlet property="btn_add_assignee" destination="0vj-XK-rWe" id="8TP-n1-OzV"/>
                         <outlet property="btn_do_later" destination="w8L-zl-wb5" id="ziZ-RQ-A3D"/>
                         <outlet property="btn_high" destination="gH5-ky-YJ7" id="AqV-9V-bmo"/>
                         <outlet property="btn_low" destination="A1L-WQ-GZH" id="y0r-dZ-iLS"/>
@@ -4144,11 +4176,191 @@
                         <outlet property="btn_percentage" destination="5qG-xc-ABd" id="u1q-VA-ayp"/>
                         <outlet property="btn_working" destination="O3O-wy-iac" id="3lo-7d-CEV"/>
                         <outlet property="editcontainer" destination="Ra6-Oz-Tkf" id="dtZ-pp-edG"/>
+                        <outlet property="edt_task_Description" destination="ZGy-HW-Rdz" id="BEg-oH-u7b"/>
+                        <outlet property="img_btn_createTask" destination="rmO-8D-7Ih" id="Oqf-cG-AOi"/>
+                        <outlet property="img_btn_type" destination="rsS-hk-bLv" id="e4g-LM-gba"/>
+                        <outlet property="img_select_date" destination="evK-KJ-msu" id="Ly8-mu-Kmf"/>
+                        <outlet property="open_calener" destination="evK-KJ-msu" id="ohL-Nw-cED"/>
+                        <outlet property="progressbar" destination="vZq-Cx-8LW" id="d13-Ut-dli"/>
+                        <outlet property="txt_dealine_date" destination="EGv-OZ-IJ2" id="ZIn-hH-fvm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WU-lt-r2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1784.8" y="-1952.2167487684731"/>
+        </scene>
+        <!--Dialog Team List-->
+        <scene sceneID="fWd-It-NoP">
+            <objects>
+                <viewController storyboardIdentifier="Dialog_TeamList" id="MoK-qB-yN3" customClass="Dialog_TeamList" customModule="fogerp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FA0-BU-Mch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJa-M4-3Zh">
+                                <rect key="frame" x="67.666666666666686" y="256" width="240" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJg-bJ-UBw">
+                                        <rect key="frame" x="180" y="11" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="1eC-7Z-6tU"/>
+                                            <constraint firstAttribute="width" constant="46" id="x4r-DL-e41"/>
+                                        </constraints>
+                                        <state key="normal" title="close">
+                                            <color key="titleColor" red="0.21674278050000001" green="0.51327953930000003" blue="0.14993009509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_close_click:" destination="MoK-qB-yN3" eventType="touchUpInside" id="2rS-lL-Zos"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uc3-pG-EJk">
+                                        <rect key="frame" x="0.0" y="53" width="240" height="247"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bfY-g9-gYq" customClass="SingleRow_LeaveStatus_TableViewCell" customModule="fogerp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfY-g9-gYq" id="c2k-MR-lDz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-Kx-3n3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.666666666666664"/>
+                                                            <state key="normal">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="lzu-Kx-3n3" firstAttribute="leading" secondItem="c2k-MR-lDz" secondAttribute="leading" id="Qvd-R1-5ZO"/>
+                                                        <constraint firstItem="lzu-Kx-3n3" firstAttribute="top" secondItem="c2k-MR-lDz" secondAttribute="top" id="Wda-1V-poF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lzu-Kx-3n3" secondAttribute="bottom" id="kO4-mb-bPH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lzu-Kx-3n3" secondAttribute="trailing" id="lya-VK-dEj"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="txtUserName" destination="lzu-Kx-3n3" id="5Sj-ox-xSb"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.56305893309999999" blue="0.23772432439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Uc3-pG-EJk" firstAttribute="top" secondItem="OJg-bJ-UBw" secondAttribute="bottom" constant="12" id="373-zF-KRQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="4Xc-Lr-uBy"/>
+                                    <constraint firstItem="OJg-bJ-UBw" firstAttribute="top" secondItem="hJa-M4-3Zh" secondAttribute="top" constant="11" id="5w7-9V-Nc8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uc3-pG-EJk" secondAttribute="trailing" id="65L-Xy-N18"/>
+                                    <constraint firstAttribute="height" constant="300" id="FjE-T7-OuS"/>
+                                    <constraint firstAttribute="trailing" secondItem="OJg-bJ-UBw" secondAttribute="trailing" constant="14" id="Ltk-a7-sne"/>
+                                    <constraint firstItem="Uc3-pG-EJk" firstAttribute="leading" secondItem="hJa-M4-3Zh" secondAttribute="leading" id="alk-OO-VfT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uc3-pG-EJk" secondAttribute="bottom" id="dF3-ne-fh7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hJa-M4-3Zh" firstAttribute="centerX" secondItem="FA0-BU-Mch" secondAttribute="centerX" id="0Fk-lZ-2YM"/>
+                            <constraint firstItem="hJa-M4-3Zh" firstAttribute="centerY" secondItem="FA0-BU-Mch" secondAttribute="centerY" id="bve-6F-Rpm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PNU-zD-69B"/>
+                    </view>
+                    <connections>
+                        <outlet property="dialogBoxView" destination="hJa-M4-3Zh" id="2EM-3h-rkj"/>
+                        <outlet property="gotoStoreButton" destination="OJg-bJ-UBw" id="8t5-46-od0"/>
+                        <outlet property="table" destination="Uc3-pG-EJk" id="mDA-xK-AS5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g64-Pt-RUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2784.8000000000002" y="-1968.4729064039409"/>
+        </scene>
+        <!--Dialog Type-->
+        <scene sceneID="PD0-hN-AQl">
+            <objects>
+                <viewController storyboardIdentifier="Dialog_Type" id="z0n-Fg-UW6" customClass="Dialog_Type" customModule="fogerp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mdN-f7-rFt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZ4-aK-IE1">
+                                <rect key="frame" x="67.666666666666686" y="256" width="240" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-w3-TJ8">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyS-xc-eUf">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="75"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Issue">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="click_issue:" destination="z0n-Fg-UW6" eventType="touchUpInside" id="Szw-DR-7Hn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugA-R8-xAU">
+                                                <rect key="frame" x="0.0" y="75" width="240" height="75"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Task">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="click_task:" destination="z0n-Fg-UW6" eventType="touchUpInside" id="wRA-Oe-NFg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htz-Uc-Myz">
+                                                <rect key="frame" x="0.0" y="150" width="240" height="75"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Question">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="click_question:" destination="z0n-Fg-UW6" eventType="touchUpInside" id="Lfa-xr-sj1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLu-AJ-wpu">
+                                                <rect key="frame" x="0.0" y="225" width="240" height="75"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Acknowledgement">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="click_acknowledgement:" destination="z0n-Fg-UW6" eventType="touchUpInside" id="nTr-PV-7Tp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98457986116409302" green="0.60766118764877319" blue="0.48651754856109619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1oQ-MC-JCp"/>
+                                    <constraint firstAttribute="trailing" secondItem="gUQ-w3-TJ8" secondAttribute="trailing" id="5TF-1G-P3f"/>
+                                    <constraint firstItem="gUQ-w3-TJ8" firstAttribute="leading" secondItem="HZ4-aK-IE1" secondAttribute="leading" id="GAN-bt-T8s"/>
+                                    <constraint firstItem="gUQ-w3-TJ8" firstAttribute="top" secondItem="HZ4-aK-IE1" secondAttribute="top" id="LP2-FT-75k"/>
+                                    <constraint firstAttribute="width" constant="240" id="V0q-cU-46U"/>
+                                    <constraint firstAttribute="bottom" secondItem="gUQ-w3-TJ8" secondAttribute="bottom" id="gGt-8k-p58"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HZ4-aK-IE1" firstAttribute="centerY" secondItem="mdN-f7-rFt" secondAttribute="centerY" id="3QV-Vq-eob"/>
+                            <constraint firstItem="HZ4-aK-IE1" firstAttribute="centerX" secondItem="mdN-f7-rFt" secondAttribute="centerX" id="lpV-nH-Bp2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z4h-F1-u3z"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_Acknowledgement" destination="VLu-AJ-wpu" id="LdF-Id-5tb"/>
+                        <outlet property="btn_Issue" destination="VyS-xc-eUf" id="hKJ-nx-UOy"/>
+                        <outlet property="btn_Question" destination="htz-Uc-Myz" id="ssa-Xz-Q7y"/>
+                        <outlet property="btn_Task" destination="ugA-R8-xAU" id="Tg6-c3-dft"/>
+                        <outlet property="dialogBoxView" destination="HZ4-aK-IE1" id="Rmu-3E-nIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eKq-Zh-8Wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3625" y="-1991"/>
         </scene>
     </scenes>
     <resources>

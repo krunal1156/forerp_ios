@@ -425,9 +425,10 @@ user_id:String,allocated:String,status:String,priority:String,severity:String,ty
         request.httpMethod = "POST"
          request.setValue("Bearer "+PrefUtil.getAccessToken(key: StaticKeys.usertoken), forHTTPHeaderField: "Authorization")
         request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
-         let paramString = "user_id="+user_id+"&allocated="+allocated+"&status="+status+"&priority="+priority+"&severity="+severity+"&type="+type+"&day="+day+"&deadline="+deadline+"&allocated_to"+allocated_to
+         let paramString = "user_id="+user_id+"&allocated="+allocated+"&status="+status+"&priority="+priority+"&severity="+severity+"&type="+type+"&day="+day+"&deadline="+deadline+"&allocated_to="+allocated_to
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         
+        print(paramString)
         
         let task = session4.dataTask(with: request as URLRequest)
         {
