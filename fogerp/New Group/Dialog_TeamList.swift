@@ -13,10 +13,34 @@ protocol PopUpDelegate {
     func handleAction(action: Bool)
 }
 
-class Dialog_TeamList: UIViewController {
+class Dialog_TeamList: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return emplist.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "SingleRow_TeamList")as! SingleRow_TeamList
+        cell.txtUserName.text = emplist[indexPath.row].name
+        let cellNameTapped = MyTapGesture(target: self, action:     #selector(nameTapped))
+        cellNameTapped.index = indexPath.row
+        cell.txtUserName.isUserInteractionEnabled = true
+        cell.txtUserName.addGestureRecognizer(cellNameTapped) //gesture added
+        
+        
+        return cell
+    }
+    class MyTapGesture: UITapGestureRecognizer {
+        var index = Int()
+    }
    
-   
+    @objc func nameTapped(tapGestureRecognizer: MyTapGesture){
+        print("Hello, "+emplist[tapGestureRecognizer.index].name)
+        self.delegate?.handleAction(action: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     var delegate: PopUpDelegate?
     //MARK:- outlets for the view controller
@@ -36,7 +60,7 @@ class Dialog_TeamList: UIViewController {
 
         user = PrefUtil.userdata()
         
-       // dataRequest(user_id: String(user.data.user_id))
+        dataRequest(user_id: String(user.data.user_id))
         
         //adding an overlay to the view to give focus to the dialog box
         view.backgroundColor = UIColor.black.withAlphaComponent(0.50)

@@ -45,13 +45,23 @@ class CenterViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell.txtDeadline.text = tracker_list[indexPath.row].deadline
         cell.txtCreatedDate.text = tracker_list[indexPath.row].created_at
        
+        
         return cell
         
         
-        
-        
+    
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var tracker_data:TrackerList.data = (tracker_list[indexPath.row]as? TrackerList.data)!
+        print(tracker_data.created_by_profile)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc = storyboard.instantiateViewController(withIdentifier: "Create_Task_ViewController") as! Create_Task_ViewController
+         nextVc.taskdata = tracker_data
+        self.present(nextVc, animated: true, completion: nil)
         
     }
+    
+   
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var progressbar: UIActivityIndicatorView!

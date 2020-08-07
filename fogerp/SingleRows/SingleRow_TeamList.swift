@@ -10,6 +10,6 @@ import UIKit
 
 class SingleRow_TeamList: UITableViewCell {
 
-    @IBOutlet weak var txtUserName: UIButton!
+    @IBOutlet weak var txtUserName: UILabel!
     
 }

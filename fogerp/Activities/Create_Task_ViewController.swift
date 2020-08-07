@@ -44,6 +44,7 @@ class Create_Task_ViewController: UIViewController,  PopUpDelegate,typedelegate{
     var empcode,empid,reportingmanager:Int!
     
     
+    var taskdata: TrackerList.data!
     
     var totaldaycount = 0.0
     var from_rbt_fullday_vaue = 1.0
@@ -184,9 +185,89 @@ class Create_Task_ViewController: UIViewController,  PopUpDelegate,typedelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = PrefUtil.userdata() 
+        user = PrefUtil.userdata()
         
-        //test
+         edt_task_Description.text = taskdata.summary
+        if(taskdata.status == "Do it Later"){
+            btn_do_later.backgroundColor = UIColor.orange
+            btn_do_later.setTitleColor(.white, for: .normal)
+            
+            btn_open.backgroundColor = UIColor.white
+            btn_open.setTitleColor(.orange, for: .normal)
+            
+            btn_working.backgroundColor = UIColor.white
+            btn_working.setTitleColor(.orange, for: .normal)
+        }else if(taskdata.status == "Open"){
+            btn_do_later.backgroundColor = UIColor.white
+            btn_do_later.setTitleColor(.orange, for: .normal)
+            
+            btn_open.backgroundColor = UIColor.orange
+            btn_open.setTitleColor(.white, for: .normal)
+            
+            btn_working.backgroundColor = UIColor.white
+            btn_working.setTitleColor(.orange, for: .normal)
+        }else if(taskdata.status == "Working"){
+            btn_do_later.backgroundColor = UIColor.white
+            btn_do_later.setTitleColor(.orange, for: .normal)
+            
+            btn_open.backgroundColor = UIColor.white
+            btn_open.setTitleColor(.orange, for: .normal)
+            
+            btn_working.backgroundColor = UIColor.orange
+            btn_working.setTitleColor(.white, for: .normal)
+        }
+        
+        
+        if(taskdata.severity == "Minor"){
+            btn_minor.backgroundColor = UIColor.orange
+            btn_minor.setTitleColor(.white, for: .normal)
+            
+            btn_major.backgroundColor = UIColor.white
+            btn_major.setTitleColor(.orange, for: .normal)
+            
+        }else{
+            btn_minor.backgroundColor = UIColor.white
+            btn_minor.setTitleColor(.orange, for: .normal)
+            
+            btn_major.backgroundColor = UIColor.orange
+            btn_major.setTitleColor(.white, for: .normal)
+            
+        }
+        
+        
+        if(taskdata.priority == "High"){
+            btn_high.backgroundColor = UIColor.orange
+            btn_high.setTitleColor(.white, for: .normal)
+            
+            btn_normal.backgroundColor = UIColor.white
+            btn_normal.setTitleColor(.orange, for: .normal)
+            
+            btn_low.backgroundColor = UIColor.white
+            btn_low.setTitleColor(.orange, for: .normal)
+            
+        }else if(taskdata.priority == "Normal"){
+            btn_high.backgroundColor = UIColor.white
+            btn_high.setTitleColor(.orange, for: .normal)
+            
+            btn_normal.backgroundColor = UIColor.orange
+            btn_normal.setTitleColor(.white, for: .normal)
+            
+            btn_low.backgroundColor = UIColor.white
+            btn_low.setTitleColor(.orange, for: .normal)
+            
+        }else if(taskdata.priority == "Low"){
+            
+            btn_high.backgroundColor = UIColor.white
+            btn_high.setTitleColor(.orange, for: .normal)
+            
+            btn_normal.backgroundColor = UIColor.white
+            btn_normal.setTitleColor(.orange, for: .normal)
+            
+            btn_low.backgroundColor = UIColor.orange
+            btn_low.setTitleColor(.white, for: .normal)
+            
+        }
+        
         
          editcontainer.roundCorners(corners: [.topRight,.bottomRight,.topLeft,.bottomLeft], radius: 30.0)
         

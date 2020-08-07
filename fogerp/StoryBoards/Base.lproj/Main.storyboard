@@ -4217,29 +4217,29 @@
                                         <rect key="frame" x="0.0" y="53" width="240" height="247"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bfY-g9-gYq" customClass="SingleRow_LeaveStatus_TableViewCell" customModule="fogerp" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SingleRow_TeamList" id="bfY-g9-gYq" customClass="SingleRow_TeamList" customModule="fogerp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfY-g9-gYq" id="c2k-MR-lDz">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-Kx-3n3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.666666666666664"/>
-                                                            <state key="normal">
-                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l2-QG-1O9">
+                                                            <rect key="frame" x="15" y="11" width="210" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="lzu-Kx-3n3" firstAttribute="leading" secondItem="c2k-MR-lDz" secondAttribute="leading" id="Qvd-R1-5ZO"/>
-                                                        <constraint firstItem="lzu-Kx-3n3" firstAttribute="top" secondItem="c2k-MR-lDz" secondAttribute="top" id="Wda-1V-poF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="lzu-Kx-3n3" secondAttribute="bottom" id="kO4-mb-bPH"/>
-                                                        <constraint firstAttribute="trailing" secondItem="lzu-Kx-3n3" secondAttribute="trailing" id="lya-VK-dEj"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="6l2-QG-1O9" secondAttribute="bottom" id="0z1-Tl-4sX"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="6l2-QG-1O9" secondAttribute="trailing" id="WXS-jO-Glz"/>
+                                                        <constraint firstItem="6l2-QG-1O9" firstAttribute="top" secondItem="c2k-MR-lDz" secondAttribute="topMargin" id="dNp-g1-HzH"/>
+                                                        <constraint firstItem="6l2-QG-1O9" firstAttribute="leading" secondItem="c2k-MR-lDz" secondAttribute="leadingMargin" id="utK-qi-7aE"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="txtUserName" destination="lzu-Kx-3n3" id="5Sj-ox-xSb"/>
+                                                    <outlet property="txtUserName" destination="6l2-QG-1O9" id="ZsT-I8-24c"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
