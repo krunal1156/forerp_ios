@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol PopUpDelegate {
-    func handleAction(action: Bool)
+    func handleAction(action: String)
 }
 
 class Dialog_TeamList: UIViewController ,UITableViewDelegate,UITableViewDataSource{
@@ -36,8 +36,8 @@ class Dialog_TeamList: UIViewController ,UITableViewDelegate,UITableViewDataSour
     }
    
     @objc func nameTapped(tapGestureRecognizer: MyTapGesture){
-        print("Hello, "+emplist[tapGestureRecognizer.index].name)
-        self.delegate?.handleAction(action: true)
+        //print("Hello, "+emplist[tapGestureRecognizer.index].name)
+        self.delegate?.handleAction(action: emplist[tapGestureRecognizer.index].name)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -49,7 +49,7 @@ class Dialog_TeamList: UIViewController ,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var table: UITableView!
     
     @IBAction func btn_close_click(_ sender: Any) {
-        self.delegate?.handleAction(action: true)
+        
         self.dismiss(animated: true, completion: nil)
     }
     var emplist = [EmpList]()
@@ -123,7 +123,7 @@ class Dialog_TeamList: UIViewController ,UITableViewDelegate,UITableViewDataSour
                 DispatchQueue.main.async {
                     
                    
-                   // self.table.reloadData()
+                    self.table.reloadData()
                     
                     
                 }

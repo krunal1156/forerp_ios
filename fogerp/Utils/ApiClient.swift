@@ -17,6 +17,7 @@ struct ApiClient {
      static let warniglist : String = "warninglist"
      static let announcementlist : String = "announcementlist"
      static let createTask : String = "trackercreate"
+     static let editTask : String = "trackeredit"
     static let emplist : String = "emplist"
     
  
